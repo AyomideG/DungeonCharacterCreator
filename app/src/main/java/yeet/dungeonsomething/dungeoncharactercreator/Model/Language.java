@@ -7,4 +7,5 @@ public class Language implements Serializable {
     String type;
     String[] typical_speakers;
     String script;
+    String url;
 }

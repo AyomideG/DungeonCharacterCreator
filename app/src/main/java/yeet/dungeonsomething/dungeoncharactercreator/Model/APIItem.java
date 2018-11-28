@@ -1,6 +1,6 @@
 package yeet.dungeonsomething.dungeoncharactercreator.Model;
 
-public class Info {
-    String name;
-    String[] desc;
+public class APIItem {
+    APIResource item;
+    int quantity;
 }

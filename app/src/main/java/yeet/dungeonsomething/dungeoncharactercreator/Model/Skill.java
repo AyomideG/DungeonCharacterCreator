@@ -6,4 +6,5 @@ public class Skill implements Serializable {
     String name;
     String[] desc;
     APIResource ability_score;
+    String url;
 }

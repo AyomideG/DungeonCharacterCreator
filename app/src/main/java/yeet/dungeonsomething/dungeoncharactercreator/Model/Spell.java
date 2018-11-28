@@ -14,5 +14,6 @@ public class Spell {
     int level;
     APIResource school;
     APIResource[] classes;
+    String url;
 
 }

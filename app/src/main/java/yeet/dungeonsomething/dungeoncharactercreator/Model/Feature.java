@@ -8,4 +8,5 @@ public class Feature implements Serializable {
     String[] desc;
     APIResource _class;
     APIResource subclass;
+    String url;
 }

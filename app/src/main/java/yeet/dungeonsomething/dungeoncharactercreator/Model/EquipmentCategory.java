@@ -1,6 +1,7 @@
 package yeet.dungeonsomething.dungeoncharactercreator.Model;
 
-public class Info {
+public class EquipmentCategory {
     String name;
-    String[] desc;
+    APIResource[] equipment;
+    String url;
 }

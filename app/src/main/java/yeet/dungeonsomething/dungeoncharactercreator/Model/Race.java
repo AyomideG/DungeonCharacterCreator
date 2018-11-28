@@ -14,7 +14,8 @@ public class Race implements Serializable {
     APIResource[] languages;
     String language_desc;
     APIResource[] traits;
-    APIResource subraces;
+    APIResource[] subraces;
+    String url;
 
 
 
