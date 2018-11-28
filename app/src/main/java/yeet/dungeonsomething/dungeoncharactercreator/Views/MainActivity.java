@@ -1,7 +1,9 @@
-package yeet.dungeonsomething.dungeoncharactercreator;
+package yeet.dungeonsomething.dungeoncharactercreator.Views;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import yeet.dungeonsomething.dungeoncharactercreator.R;
 
 public class MainActivity extends AppCompatActivity {
 
