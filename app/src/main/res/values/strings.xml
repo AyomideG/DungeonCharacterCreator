@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">DungeonCharacterCreator</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="languages">Languages</string>
+    <string name="flaws">Flaws</string>
+    <string name="ideals">Ideals</string>
+    <string name="bonds">Bonds</string>
+    <string name="armor_shields">Armors &amp; Shields</string>
+    <string name="weapons">Weapons</string>
+    <string name="background">Background</string>
+    <string name="skillsprof">Skills &amp; Proficiencies</string>
+    <string name="charclass">Class</string>
+    <string name="race">Race</string>
+    <string name="traits">Traits</string>
+    <string name="statistics">Statistics</string>
+    <string name="inventory">Inventory</string>
+    <string name="level">Level</string>
+
 </resources>
