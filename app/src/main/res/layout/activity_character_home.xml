@@ -7,6 +7,7 @@
     tools:context=".Views.CharacterHomeActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -16,6 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryDark"
+            android:gravity="bottom"
             android:orientation="horizontal">
 
             <TextView
@@ -25,7 +27,8 @@
                 android:layout_weight="1"
                 android:text="Name"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                app:fontFamily="@font/balladehf" />
 
             <TextView
                 android:id="@+id/characterRace"
@@ -36,7 +39,8 @@
                 android:paddingRight="5sp"
                 android:text="Race"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                app:fontFamily="@font/balladehf" />
 
             <TextView
                 android:id="@+id/characterClass"
@@ -45,7 +49,8 @@
                 android:layout_weight="1"
                 android:text="Class"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                app:fontFamily="@font/balladehf" />
 
             <TextView
                 android:id="@+id/characterLevel"
@@ -54,7 +59,16 @@
                 android:layout_weight="1"
                 android:text="Level"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                app:fontFamily="@font/balladehf" />
+
+            <ImageButton
+                android:id="@+id/imageButton10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/edit"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -118,6 +132,7 @@
             android:id="@+id/coreStats"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5sp"
             android:layout_marginLeft="5sp"
             android:layout_marginRight="5sp"
             android:background="@drawable/border"
@@ -224,6 +239,7 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="10sp"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
@@ -252,6 +268,7 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_marginRight="10sp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
@@ -337,84 +354,93 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/imageButton10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/edit" />
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/nav"
-            android:layout_width="match_parent"
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:baselineAligned="false"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout">
+
+        <ImageButton
+            android:id="@+id/toAttacks"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:baselineAligned="false"
-            android:gravity="bottom|center_horizontal|end"
-            android:orientation="horizontal">
+            android:background="@color/colorPrimaryDark"
+            android:paddingTop="25sp"
+            android:paddingBottom="25sp"
+            android:scaleType="fitCenter"
+            android:scaleX="1"
+            android:scaleY="1"
+            app:srcCompat="@drawable/attacks"
+            android:tint="@color/white"
+            android:onClick="showAttacks"
+            />
 
-            <ImageButton
-                android:id="@+id/toAttacks"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingTop="25sp"
-                android:paddingBottom="25sp"
-                android:scaleType="fitCenter"
-                android:scaleX="1"
-                android:scaleY="1"
-                app:srcCompat="@drawable/attacks" />
+        <ImageButton
+            android:id="@+id/toStats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:paddingTop="25sp"
+            android:paddingBottom="25sp"
+            android:scaleType="fitCenter"
+            android:scaleX="1"
+            android:scaleY="1"
+            app:srcCompat="@drawable/stats"
+            android:tint="@color/white"/>
 
-            <ImageButton
-                android:id="@+id/toStats"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingTop="25sp"
-                android:paddingBottom="25sp"
-                android:scaleType="fitCenter"
-                android:scaleX="1"
-                android:scaleY="1"
-                app:srcCompat="@drawable/stats" />
+        <ImageButton
+            android:id="@+id/toBG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:paddingTop="25sp"
+            android:paddingBottom="25sp"
+            android:scaleType="fitCenter"
+            android:scaleX="1"
+            android:scaleY="1"
+            app:srcCompat="@drawable/background"
+            android:tint="@color/white"
+            />
 
-            <ImageButton
-                android:id="@+id/toBG"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingTop="25sp"
-                android:paddingBottom="25sp"
-                android:scaleType="fitCenter"
-                android:scaleX="1"
-                android:scaleY="1"
-                app:srcCompat="@drawable/background" />
+        <ImageButton
+            android:id="@+id/toInv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:paddingTop="25sp"
+            android:paddingBottom="25sp"
+            android:scaleType="fitCenter"
+            android:scaleX="1"
+            android:scaleY="1"
+            app:srcCompat="@drawable/inventory"
+            android:tint="@color/white"/>
 
-            <ImageButton
-                android:id="@+id/toInv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingTop="25sp"
-                android:paddingBottom="25sp"
-                android:scaleType="fitCenter"
-                android:scaleX="1"
-                android:scaleY="1"
-                app:srcCompat="@drawable/inventory" />
+        <ImageButton
+            android:id="@+id/toNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:paddingTop="25sp"
+            android:paddingBottom="25sp"
+            android:scaleType="fitCenter"
+            android:scaleX="1"
+            android:scaleY="1"
+            app:srcCompat="@drawable/notes"
+            android:tint="@color/white"/>
 
-            <ImageButton
-                android:id="@+id/toNotes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingTop="25sp"
-                android:paddingBottom="25sp"
-                android:scaleType="fitCenter"
-                android:scaleX="1"
-                android:scaleY="1"
-                app:srcCompat="@drawable/notes" />
-
-        </LinearLayout>
     </LinearLayout>
 
 
