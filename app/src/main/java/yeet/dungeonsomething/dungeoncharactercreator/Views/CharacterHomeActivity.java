@@ -15,5 +15,7 @@ public class CharacterHomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character_home);
 
+
+
     }
 }
