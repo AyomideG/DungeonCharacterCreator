@@ -17,6 +17,7 @@ public class Character implements Serializable {
     ArrayList<Note> notes;
     ArrayList<Item> inventory;
 
-
-
+    public String getName() {
+        return name;
+    }
 }
