@@ -121,7 +121,7 @@
             android:id="@+id/toCharacterActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="showCharacter"
+            android:onClick="toCharacterSheet"
             android:text="To Character Sheet"
             tools:layout_editor_absoluteX="106dp"
             tools:layout_editor_absoluteY="467dp" />

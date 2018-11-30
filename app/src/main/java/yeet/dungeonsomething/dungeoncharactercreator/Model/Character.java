@@ -16,6 +16,7 @@ public class Character implements Serializable {
     ArrayList<Proficiency> proficiencies;
     ArrayList<Note> notes;
     ArrayList<Item> inventory;
+    ArrayList<Spell> knownspells;
 
     public String getName() {
         return name;

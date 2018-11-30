@@ -44,4 +44,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, WizardTabsActivity.class);
         startActivity(intent);
     }
+
+    public void toCharacterSheet(View view){
+        Intent intent = new Intent(this, CharacterHomeActivity.class);
+        startActivity(intent);
+    }
 }
