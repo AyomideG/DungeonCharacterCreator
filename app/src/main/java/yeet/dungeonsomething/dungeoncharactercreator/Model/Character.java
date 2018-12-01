@@ -17,6 +17,7 @@ public class Character implements Serializable {
     private ArrayList<Note> notes;
     private ArrayList<Item> inventory;
     private ArrayList<Spell> knownspells;
+    private PlayerInfo playerInfo;
 
     public Character(){
         name = "No one";
@@ -32,6 +33,7 @@ public class Character implements Serializable {
         notes = new ArrayList<>();
         inventory = new ArrayList<>();
         knownspells = new ArrayList<>();
+        playerInfo = new PlayerInfo();
     }
 
     public String getName() {
@@ -138,4 +140,8 @@ public class Character implements Serializable {
     public void setKnownspells(ArrayList<Spell> knownspells) {
         this.knownspells = knownspells;
     }
+
+    public PlayerInfo getPlayerInfo() { return playerInfo; }
+
+    public void setPlayerInfo(PlayerInfo playerInfo) { this.playerInfo = playerInfo; }
 }

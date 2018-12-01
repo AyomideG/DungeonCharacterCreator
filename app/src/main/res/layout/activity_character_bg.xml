@@ -21,7 +21,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/character_home_name"
+                android:id="@+id/character_bg_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -31,7 +31,7 @@
                 app:fontFamily="@font/balladehf" />
 
             <TextView
-                android:id="@+id/character_home_race"
+                android:id="@+id/character_bg_race"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -43,7 +43,7 @@
                 app:fontFamily="@font/balladehf" />
 
             <TextView
-                android:id="@+id/character_home_class"
+                android:id="@+id/character_bg_class"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -53,7 +53,7 @@
                 app:fontFamily="@font/balladehf" />
 
             <TextView
-                android:id="@+id/characterLevel"
+                android:id="@+id/character_bg_Level"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -137,7 +137,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/linear01">
 
                     <TextView
-                        android:id="@+id/bgtext"
+                        android:id="@+id/character_bg_background"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:foregroundGravity="left"
@@ -182,7 +182,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/linear03">
 
                     <TextView
-                        android:id="@+id/aligntext"
+                        android:id="@+id/character_bg_alignment"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="left"
@@ -226,7 +226,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/linear04">
 
                     <TextView
-                        android:id="@+id/persview"
+                        android:id="@+id/character_bg_traits"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
@@ -270,7 +270,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/linear06">
 
                     <TextView
-                        android:id="@+id/bondstext"
+                        android:id="@+id/character_bg_bonds"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="left"
@@ -313,7 +313,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/linear08">
 
                     <TextView
-                        android:id="@+id/flawstext"
+                        android:id="@+id/character_bg_flaws"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="left"
@@ -356,11 +356,53 @@
                     app:layout_constraintTop_toBottomOf="@+id/linear10">
 
                     <TextView
-                        android:id="@+id/idealstext"
+                        android:id="@+id/character_bg_ideals"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="left"
                         android:text="a functioning dnd character sheet app that has more than a week of development time"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:fontFamily="@font/balladehf" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linear13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linear11">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Languages"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:textSize="24sp"
+                        app:fontFamily="@font/balladehf" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/edit" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linear13">
+
+                    <TextView
+                        android:id="@+id/character_bg_languages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Common"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         app:fontFamily="@font/balladehf" />
