@@ -30,8 +30,10 @@ public class CharStatsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_char_stat, container, false);
-        TextView test = (TextView) view.findViewById(R.id.ability_name);
-        test.setText(getArguments().getString("data"));
+        ((TextView) view.findViewById(R.id.ability_name)).setText(getArguments().getString("data"));
+        ((TextView) view.findViewById(R.id.player_ability)).setText(String.valueOf(getArguments().getInt("value")));
+        ((TextView) view.findViewById(R.id.abilityModifier)).setText(String.valueOf(getArguments().getInt("mod")));
+        ((TextView) view.findViewById(R.id.ability_save)).setText(String.valueOf(getArguments().getInt("save")));
 
         //Add proficiencies
         Skill[] profs = APIDataManager.getInstance(getContext().getAssets()).getSkills();

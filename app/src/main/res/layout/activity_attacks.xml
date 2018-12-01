@@ -53,7 +53,7 @@
                 app:fontFamily="@font/balladehf" />
 
             <TextView
-                android:id="@+id/characterLevel"
+                android:id="@+id/character_home_level"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

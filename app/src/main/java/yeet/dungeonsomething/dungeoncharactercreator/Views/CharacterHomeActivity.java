@@ -31,10 +31,12 @@ public class CharacterHomeActivity extends AppCompatActivity {
 
         if(myCharacter == null){
             Log.e("ERROR","Character data null on create");
+            //create a BS new character so the app doesnt die
             myCharacter = new Character();
             myCharacter.setRace(APIDataManager.getInstance(getAssets()).getRaces()[0]);
             myCharacter.setMyclass(APIDataManager.getInstance(getAssets()).getClasses()[0]);
             myCharacter.setStats(new Statistics());
+            CharacterManager.getInstance(getAssets()).newCharacter(myCharacter);
         }
     }
     @Override
@@ -61,15 +63,18 @@ public class CharacterHomeActivity extends AppCompatActivity {
 
     public void showAttacks(View view){
         Intent intent = new Intent(this, AttacksActivity.class);
+        intent.putExtra("CHARACTER_NAME", myCharacter.getName());
         startActivity(intent);
     }
     public void showStats(View view){
         Intent intent = new Intent(this, StatsActivity.class);
+        intent.putExtra("CHARACTER_NAME", myCharacter.getName());
         startActivity(intent);
     }
 
     public void showBG(View view){
         Intent intent = new Intent(this, CharacterBGActivity.class);
+        intent.putExtra("CHARACTER_NAME", myCharacter.getName());
         startActivity(intent);
     }
 }

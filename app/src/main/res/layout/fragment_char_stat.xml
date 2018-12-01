@@ -54,7 +54,7 @@
                 android:paddingRight="40sp">
 
                 <TextView
-                    android:id="@+id/spellcastingBonus"
+                    android:id="@+id/abilityModifier"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
