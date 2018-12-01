@@ -77,7 +77,7 @@
             app:layout_constraintTop_toBottomOf="@+id/header">
 
             <TextView
-                android:id="@+id/attacksTitle"
+                android:id="@+id/bgTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -207,9 +207,10 @@
         <ListView
             android:id="@+id/persview"
             android:layout_width="match_parent"
-            app:fontFamily="@font/balladehf"
             android:layout_height="wrap_content"
-            android:textSize="18sp"></ListView>
+            app:fontFamily="@font/balladehf"
+            android:textSize="18sp">
+        </ListView>
 
     </LinearLayout>
 
@@ -353,6 +354,7 @@
             android:paddingTop="25sp"
             android:paddingBottom="25sp"
             android:scaleType="fitCenter"
+            android:onClick="showAttacks"
             android:scaleX="1"
             android:scaleY="1"
             app:srcCompat="@drawable/attacks" />
@@ -366,6 +368,7 @@
             android:paddingTop="25sp"
             android:paddingBottom="25sp"
             android:scaleType="fitCenter"
+            android:onClick="showStats"
             android:scaleX="1"
             android:scaleY="1"
             app:srcCompat="@drawable/stats" />

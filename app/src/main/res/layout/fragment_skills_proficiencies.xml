@@ -233,7 +233,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="15dp"
                     android:textColor="@color/colorSecondaryDark"
-                    app:fontFamily="@font/audiowide" />
+                    app:fontFamily="@font/balladehf" />
 
             </LinearLayout>
 

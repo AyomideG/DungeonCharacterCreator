@@ -32,4 +32,9 @@ public class CharacterBGActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AttacksActivity.class);
         startActivity(intent);
     }
+
+    public void showStats(View view){
+        Intent intent = new Intent(this, StatsActivity.class);
+        startActivity(intent);
+    }
 }
