@@ -47,8 +47,9 @@ public class CharacterHomeActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.character_home_armor_class)).setText(String.valueOf(myCharacter.getArmorClass()));
         ((TextView) findViewById(R.id.character_home_initative)).setText(String.valueOf("TBD"));
         ((TextView) findViewById(R.id.character_home_speed)).setText(myCharacter.getRace().getSpeed() + "ft");
+        ((TextView) findViewById(R.id.character_home_hp)).setText(String.valueOf(myCharacter.getHealthPoints()));
     }
-    
+
     private Character loadMyCharacterData(Bundle b){
         String name = b.getString("CHARACTER_NAME");
         Character c = null;
