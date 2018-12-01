@@ -1,6 +1,5 @@
 package yeet.dungeonsomething.dungeoncharactercreator.Views;
 
-import android.app.ActionBar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -29,7 +28,7 @@ public class WizardTabsActivity extends AppCompatActivity {
         //Get toolbar from activity_wizard_tabs
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        //Get the tablayout -- Define tab text...
+        //Get the tab layout -- Define tab text...
         TabLayout layout = (TabLayout) findViewById(R.id.tab_layout);
         //Making the tabs scrollable so text can all be seen -- probably not necessary for character sheet part
         layout.setTabMode(TabLayout.MODE_SCROLLABLE);
@@ -38,7 +37,6 @@ public class WizardTabsActivity extends AppCompatActivity {
         layout.addTab(layout.newTab().setText(R.string.charclass));
         layout.addTab(layout.newTab().setText(R.string.level));
         layout.addTab(layout.newTab().setText(R.string.statistics));
-        layout.addTab(layout.newTab().setText(R.string.skillsprof));
         layout.addTab(layout.newTab().setText(R.string.traits));
         layout.addTab(layout.newTab().setText(R.string.background));
         layout.addTab(layout.newTab().setText(R.string.inventory));
