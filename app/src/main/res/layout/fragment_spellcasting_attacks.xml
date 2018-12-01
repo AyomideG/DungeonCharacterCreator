@@ -40,7 +40,7 @@
                     android:id="@+id/textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Proficency"
+                    android:text="Level"
                     android:textColor="@color/black"
                     app:fontFamily="@font/balladehf" />
             </LinearLayout>

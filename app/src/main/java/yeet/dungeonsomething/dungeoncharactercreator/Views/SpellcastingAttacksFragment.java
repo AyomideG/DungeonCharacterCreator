@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -15,6 +16,8 @@ import java.util.HashMap;
 import java.util.List;
 
 import yeet.dungeonsomething.dungeoncharactercreator.APIDataManager;
+import yeet.dungeonsomething.dungeoncharactercreator.CharacterManager;
+import yeet.dungeonsomething.dungeoncharactercreator.Model.Character;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Spell;
 import yeet.dungeonsomething.dungeoncharactercreator.R;
 
@@ -39,8 +42,17 @@ public class SpellcastingAttacksFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_spellcasting_attacks, container, false);
+        View view = inflater.inflate(R.layout.fragment_spellcasting_attacks, container, false);
         // Inflate the layout for this fragment
+
+        //set the data
+        Character data = CharacterManager.getInstance(getActivity().getAssets()).getCharacter();
+        ((TextView) view.findViewById(R.id.spellcastingLevel)).setText(String.valueOf("TBD"));
+        ((TextView) view.findViewById(R.id.spellcastingBonus)).setText(String.valueOf("TBD"));
+        ((TextView) view.findViewById(R.id.spellcastingDC)).setText("TBD");
+
+
+        return view;
     }
 
     @Override
