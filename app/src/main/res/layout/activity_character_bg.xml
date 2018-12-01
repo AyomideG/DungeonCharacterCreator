@@ -236,13 +236,55 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/linear15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linear05">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Features"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:textSize="24sp"
+                        app:fontFamily="@font/balladehf" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/edit" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linear15">
+
+                    <TextView
+                        android:id="@+id/character_bg_features"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="have those"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:fontFamily="@font/balladehf" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/linear06"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintTop_toBottomOf="@+id/linear05">
+                    app:layout_constraintTop_toBottomOf="@+id/linear16">
 
                     <TextView
                         android:layout_width="wrap_content"
