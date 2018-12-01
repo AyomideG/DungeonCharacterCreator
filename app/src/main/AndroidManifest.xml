@@ -24,6 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Views.AttacksActivity"></activity>
+        <activity android:name=".Views.StatsActivity"></activity>
         <activity android:name=".Views.WizardTabsActivity"></activity>
     </application>
 

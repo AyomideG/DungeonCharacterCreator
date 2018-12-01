@@ -1,31 +1,250 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
     tools:context=".Views.InventoryFragment">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/armor_shields" />
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/armor_shields_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/weapons" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp">
 
-    <EditText
-        android:id="@+id/weapons_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+            <TextView
+                android:id="@+id/armorView"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:text="Armor and Shields"
+                android:textSize="25dp"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/livingst" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/balladehf" />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="+"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/balladehf" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/weaponsView"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:text="Weapons"
+                android:textSize="25dp"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/livingst" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/balladehf" />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="+"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/balladehf" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/wandsView"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:text="Wands and Rings"
+                android:textSize="25dp"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/livingst" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/balladehf" />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="+"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/balladehf" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/scrollsView"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:text="Scrolls and Potions"
+                android:textSize="25dp"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/livingst" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/balladehf" />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="+"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/balladehf" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/foodView"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:text="Food"
+                android:textSize="25dp"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/livingst" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/balladehf" />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="+"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/balladehf" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/miscView"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:text="Mics Gear and Tools"
+                android:textSize="25dp"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/livingst" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/balladehf" />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="+"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/balladehf" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/plotView"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:text="Plot Important Item"
+                android:textSize="25dp"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/livingst" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/balladehf" />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="+"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/balladehf" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
 </FrameLayout>

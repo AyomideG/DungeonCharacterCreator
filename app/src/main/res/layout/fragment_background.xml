@@ -1,20 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
     tools:context=".Views.BackgroundFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/background" />
+        android:orientation="vertical"
+        android:padding="5dp">
 
-    <EditText
-        android:id="@+id/background_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        <TextView
+            android:id="@+id/backgroundView"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="Character Background"
+            android:textColor="@color/colorSecondaryDark"
+            android:textSize="25dp"
+            app:fontFamily="@font/balladehf" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="Please fill out character background information below"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/colorSecondaryDark"
+            app:fontFamily="@font/livingst"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/colorAccent"
+            android:scrollbars="horizontal"/>
+
+    </LinearLayout>
 
 
 </FrameLayout>

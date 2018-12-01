@@ -1,20 +1,346 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
     tools:context=".Views.SkillsProficienciesFragment">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/skillsprof" />
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/skillsprof_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please select a value for your character's ability and select from the list of Proficiencies."
+                android:textColor="@color/colorSecondaryDark"
+                android:textSize="15dp"
+                app:fontFamily="@font/livingst" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/strView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="Strength"
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textSize="25dp"
+                    app:fontFamily="@font/livingst" />
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/balladehf"/>
+
+            </LinearLayout>
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saving Throws"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Athletics"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/dexView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="Dexterity"
+                    android:textSize="25dp"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/livingst" />
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/balladehf"/>
+
+            </LinearLayout>
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saving Throws"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Acrobatics"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sleight of Hand"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stealth"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/conView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="Constitution"
+                    android:textSize="25dp"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/livingst" />
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/balladehf"/>
+
+            </LinearLayout>
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saving Throws"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/intView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="Intelligence"
+                    android:textSize="25dp"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/livingst" />
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/balladehf"/>
+
+            </LinearLayout>
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saving Throws"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Arcana"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Investigation"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nature"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Religion"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/wisView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="Wisdom"
+                    android:textSize="25dp"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/livingst" />
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/audiowide" />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saving Throws"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Animal Handling"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Insight"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Medicine"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Perception"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Survival"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/chaView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="Charisma"
+                    android:textSize="25dp"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/livingst" />
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/balladehf" />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saving Throws"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deception"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Intimidation"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Performance"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Persuasion"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/balladehf" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
 </FrameLayout>

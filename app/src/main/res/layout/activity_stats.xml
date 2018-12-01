@@ -77,60 +77,65 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/attacksTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:gravity="center"
                 android:padding="10sp"
-                android:text="Attacks and Spellcasting"
+                android:text="Attributes"
                 android:textColor="@color/black"
                 android:textSize="24sp"
-                app:fontFamily="@font/balladehf"
-                />
+                app:fontFamily="@font/balladehf" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10sp"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <LinearLayout
+            <android.support.design.widget.TabLayout
+                android:id="@+id/stats_layout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight=".5"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary">
 
-                <android.support.design.widget.TabLayout
-                    android:id="@+id/attacks_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <android.support.design.widget.TabItem
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:icon="@drawable/attacks"
-                        android:text="Att" />
-
-                    <android.support.design.widget.TabItem
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:icon="@drawable/magic"
-                        android:text="SPC" />
-
-                </android.support.design.widget.TabLayout>
-
-                <android.support.v4.view.ViewPager
-                    android:id="@+id/attacks_pager"
+                <android.support.design.widget.TabItem
                     android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"></android.support.v4.view.ViewPager>
+                    android:layout_height="wrap_content"
+                    android:text="Left" />
 
-            </LinearLayout>
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Left" />
 
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Left" />
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Left" />
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Center" />
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Right" />
+            </android.support.design.widget.TabLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/stats_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
         </LinearLayout>
 
@@ -151,13 +156,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/black"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="showAttacks"
             android:paddingTop="25sp"
             android:paddingBottom="25sp"
             android:scaleType="fitCenter"
             android:scaleX="1"
             android:scaleY="1"
-            android:tint="@color/white"
+            android:tint="@color/black"
             app:srcCompat="@drawable/attacks" />
 
         <ImageButton
@@ -165,12 +171,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/black"
             android:paddingTop="25sp"
             android:paddingBottom="25sp"
             android:scaleType="fitCenter"
             android:scaleX="1"
             android:scaleY="1"
+            android:tint="@color/white"
             app:srcCompat="@drawable/stats" />
 
         <ImageButton
