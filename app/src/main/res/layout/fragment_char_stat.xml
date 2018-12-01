@@ -58,7 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="+4"
+                    android:text="+2"
                     android:textColor="@color/black"
                     android:textSize="30sp"
                     app:fontFamily="@font/balladehf" />
@@ -96,7 +96,14 @@
                     android:textColor="@color/black"
                     app:fontFamily="@font/balladehf" />
             </LinearLayout>
+
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/proficiencies_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
 
     </LinearLayout>
 

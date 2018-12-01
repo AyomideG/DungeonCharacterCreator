@@ -4,127 +4,115 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.MainActivity">
 
-    <Button
-        android:id="@+id/wizard_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="bottom"
-        android:onClick="toWizard"
-        android:text="To Character Creation"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@id/LinearLayout"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_marginLeft="50dp"
-        tools:layout_marginRight="50dp" />
+    tools:context=".Views.MainActivity">
 
     <LinearLayout
         android:id="@+id/LinearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
         android:gravity="center_vertical"
         android:orientation="vertical"
+        android:paddingEnd="50dp"
         android:paddingRight="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:background="@color/colorPrimaryDark"
-        tools:paddingLeft="50dp">
+        android:paddingStart="50dp"
+        android:visibility="visible">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="20dp"
-            android:scaleX="5"
-            android:scaleY="5"
-            app:srcCompat="@drawable/logolegoyeet" />
+            android:paddingBottom="10dp"
+            android:scaleX="2"
+            android:scaleY="2"
+            app:srcCompat="@mipmap/ic_launcher_foreground"
+            tools:ignore="VectorDrawableCompat" />
 
         <android.support.v7.widget.AppCompatEditText
             android:id="@+id/CharacterName"
+            android:clickable="true"
+            android:focusable="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:fontFamily="@font/balladehf"
             android:hint="Underline Color Change"
             android:inputType="textPersonName"
             android:text="New Character"
+            android:textColor="@color/white"
             app:backgroundTint="@color/colorPrimary"
-            tools:clickable="true"
-            tools:layout_editor_absoluteX="84dp"
-            tools:layout_editor_absoluteY="385dp"
-            tools:textColor="@color/white" />
+            app:fontFamily="@font/balladehf" />
 
         <android.support.v7.widget.AppCompatEditText
             android:id="@+id/CharacterName2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="false"
             android:ems="10"
-            android:fontFamily="@font/balladehf"
             android:hint="Underline Color Change"
             android:inputType="textPersonName"
             android:text="New Character"
+            android:textColor="@color/white"
             app:backgroundTint="@color/colorPrimary"
-            tools:clickable="true"
-            tools:layout_editor_absoluteX="84dp"
-            tools:layout_editor_absoluteY="325dp"
-            tools:textColor="@color/white" />
+            app:fontFamily="@font/balladehf" />
 
         <android.support.v7.widget.AppCompatEditText
             android:id="@+id/CharacterName3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:fontFamily="@font/balladehf"
             android:hint="Underline Color Change"
             android:inputType="textPersonName"
+            android:clickable="true"
+            android:focusable="false"
+            android:textColor="@color/white"
             android:text="New Character"
             app:backgroundTint="@color/colorPrimary"
-            tools:clickable="true"
-            tools:layout_editor_absoluteX="85dp"
-            tools:layout_editor_absoluteY="187dp"
-            tools:textColor="@color/white" />
+            app:fontFamily="@font/balladehf" />
 
         <android.support.v7.widget.AppCompatEditText
             android:id="@+id/CharacterName4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:fontFamily="@font/balladehf"
             android:hint="Underline Color Change"
             android:inputType="textPersonName"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:focusable="false"
             android:text="New Character"
             app:backgroundTint="@color/colorPrimary"
-            tools:clickable="true"
-            tools:layout_editor_absoluteX="85dp"
-            tools:layout_editor_absoluteY="260dp"
-            tools:textColor="@color/white" />
+            app:fontFamily="@font/balladehf" />
 
         <android.support.v7.widget.AppCompatEditText
             android:id="@+id/CharacterName5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:fontFamily="@font/balladehf"
             android:hint="Underline Color Change"
             android:inputType="textPersonName"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:focusable="false"
             android:text="New Character"
             app:backgroundTint="@color/colorPrimary"
-            tools:clickable="true"
-            tools:layout_editor_absoluteX="84dp"
-            tools:layout_editor_absoluteY="121dp"
-            tools:textColor="@color/white" />
+            app:fontFamily="@font/balladehf" />
 
         <Button
             android:id="@+id/toCharacterActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="toCharacterSheet"
-            android:text="To Character Sheet"
-            tools:layout_editor_absoluteX="106dp"
-            tools:layout_editor_absoluteY="467dp" />
+            android:text="To Character Sheet" />
+
+        <Button
+            android:id="@+id/wizard_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="toWizard"
+            android:text="To Character Creation"
+            android:visibility="visible" />
 
     </LinearLayout>
 
