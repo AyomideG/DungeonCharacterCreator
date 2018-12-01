@@ -28,4 +28,9 @@ public class CharacterHomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, StatsActivity.class);
         startActivity(intent);
     }
+
+    public void showBG(View view){
+        Intent intent = new Intent(this, CharacterBGActivity.class);
+        startActivity(intent);
+    }
 }
