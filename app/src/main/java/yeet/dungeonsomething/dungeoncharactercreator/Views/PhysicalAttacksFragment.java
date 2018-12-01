@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.LinearLayout;
 
 import yeet.dungeonsomething.dungeoncharactercreator.R;
 
@@ -17,6 +19,15 @@ public class PhysicalAttacksFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_physical_attacks, container, false);
+        View view = inflater.inflate(R.layout.fragment_physical_attacks, container, false);
+
+        View atkLayout = (LinearLayout) view.findViewById(R.id.attacks_layout);
+        View attack = inflater.inflate(R.layout.attack_item, container, false);
+//        ((CheckBox)profItem.findViewById(R.id.prof_check)).setText(profs[i].getName());
+        ((LinearLayout) atkLayout).addView(attack);
+
+        return view;
     }
+
+
 }
