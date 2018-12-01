@@ -29,6 +29,8 @@ public class WizardTabsActivity extends AppCompatActivity {
         //Get toolbar from activity_wizard_tabs
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        toolbar.setTitle("");
         //Get the tablayout -- Define tab text...
         TabLayout layout = (TabLayout) findViewById(R.id.tab_layout);
         //Making the tabs scrollable so text can all be seen -- probably not necessary for character sheet part
