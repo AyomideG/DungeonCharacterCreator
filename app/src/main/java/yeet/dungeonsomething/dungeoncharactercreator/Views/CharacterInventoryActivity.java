@@ -51,6 +51,14 @@ public class CharacterInventoryActivity extends AppCompatActivity {
             myCharacter.setInventory(new ArrayList<Item>());
             CharacterManager.getInstance(getAssets()).newCharacter(myCharacter);
         }
+
+        findViewById(R.id.titlerow).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showHome(v);
+            }
+        });
+
     }
 
     @Override
@@ -98,6 +106,10 @@ public class CharacterInventoryActivity extends AppCompatActivity {
     }
     public void showInventory(View view) {
         Intent intent = new Intent(this, CharacterInventoryActivity.class);
+        startActivity(intent);
+    }
+    public void showHome(View view) {
+        Intent intent = new Intent(this, CharacterHomeActivity.class);
         startActivity(intent);
     }
 

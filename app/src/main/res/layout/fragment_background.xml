@@ -49,7 +49,7 @@
                 android:cursorVisible="true"
                 android:textCursorDrawable="@color/black"
                 android:textColor="@color/colorSecondaryDark"
-                app:fontFamily="@font/acme" />
+                app:fontFamily="@font/balladehf" />
 
         </LinearLayout>
 

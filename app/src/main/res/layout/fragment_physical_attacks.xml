@@ -86,13 +86,18 @@
             android:textSize="24sp"
             app:fontFamily="@font/balladehf" />
 
-        <LinearLayout
-            android:id="@+id/attacks_layout"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/attacks_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </ScrollView>
 
     </LinearLayout>
 </FrameLayout>

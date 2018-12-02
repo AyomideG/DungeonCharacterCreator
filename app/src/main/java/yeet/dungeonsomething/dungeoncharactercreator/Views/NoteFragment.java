@@ -38,7 +38,7 @@ public class NoteFragment extends DialogFragment {
 
         View view = inflater.inflate(R.layout.fragment_note, container, false);
         view.bringToFront();
-        view.
+        //view.
         titleHolder = view.findViewById(R.id.title);
         descriptionHolder = view.findViewById(R.id.description);
         saveButton = view.findViewById(R.id.button2);

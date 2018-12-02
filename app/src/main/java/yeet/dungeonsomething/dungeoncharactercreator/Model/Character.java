@@ -14,6 +14,7 @@ public class Character implements Serializable {
     private int speed;
     private int armorClass;
     private ArrayList<Proficiency> proficiencies;
+    private ArrayList<Skill> skillsProficentIn;
     private ArrayList<Note> notes;
     private ArrayList<Item> inventory;
     private ArrayList<Spell> knownspells;
@@ -30,6 +31,7 @@ public class Character implements Serializable {
         speed = 0;
         armorClass = 0;
         proficiencies = new ArrayList<>();
+        skillsProficentIn = new ArrayList<>();
         notes = new ArrayList<>();
         inventory = new ArrayList<>();
         knownspells = new ArrayList<>();
@@ -144,4 +146,12 @@ public class Character implements Serializable {
     public PlayerInfo getPlayerInfo() { return playerInfo; }
 
     public void setPlayerInfo(PlayerInfo playerInfo) { this.playerInfo = playerInfo; }
+
+    public ArrayList<Skill> getSkillsProficentIn() {
+        return skillsProficentIn;
+    }
+
+    public void setSkillsProficentIn(ArrayList<Skill> skillsProficentIn) {
+        this.skillsProficentIn = skillsProficentIn;
+    }
 }
