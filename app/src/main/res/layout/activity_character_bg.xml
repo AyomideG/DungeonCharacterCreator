@@ -7,10 +7,11 @@
     tools:context=".Views.CharacterBGActivity">
 
     <LinearLayout
+        android:id="@+id/linearlay"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:id="@+id/linearlay">
+        android:orientation="vertical">
+
         <LinearLayout
             android:id="@+id/header"
             android:layout_width="match_parent"
@@ -20,7 +21,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/character_home_name"
+                android:id="@+id/character_bg_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -30,7 +31,7 @@
                 app:fontFamily="@font/balladehf" />
 
             <TextView
-                android:id="@+id/character_home_race"
+                android:id="@+id/character_bg_race"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -42,7 +43,7 @@
                 app:fontFamily="@font/balladehf" />
 
             <TextView
-                android:id="@+id/character_home_class"
+                android:id="@+id/character_bg_class"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -52,7 +53,7 @@
                 app:fontFamily="@font/balladehf" />
 
             <TextView
-                android:id="@+id/characterLevel"
+                android:id="@+id/character_bg_Level"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -66,9 +67,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/edit"
-                />
+                app:srcCompat="@drawable/edit" />
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/titlerow"
             android:layout_width="match_parent"
@@ -90,251 +91,368 @@
                 app:fontFamily="@font/balladehf" />
 
         </LinearLayout>
-        <LinearLayout
-        android:id="@+id/linear01"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/linear02">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="@string/background"
-            android:textSize="24sp"
-            app:fontFamily="@font/balladehf" />
-
-        <ImageButton
-            android:id="@+id/imageButton05"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/edit" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linear02"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/linear01">
-
-        <TextView
-            android:id="@+id/bgtext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="One small step for man, one big yeet for mankind"
-            android:textSize="18sp"
-            app:fontFamily="@font/balladehf" />
-    </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linear03"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/linear02">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:textSize="24sp"
-                android:text="Alignment"
-                app:fontFamily="@font/balladehf" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/imageButton22"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/edit" />
+                <LinearLayout
+                    android:id="@+id/linear01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toTopOf="@+id/linear02">
 
-        </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/background"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:layout_weight="1"
+                        app:fontFamily="@font/balladehf" />
 
-        <LinearLayout
-            android:id="@+id/linear12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/linear03">
+                    <ImageButton
+                        android:id="@+id/imageButton05"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/edit" />
 
-            <TextView
-                android:id="@+id/aligntext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="neutral good"
-                android:textSize="18sp"
-                app:fontFamily="@font/balladehf" />
-        </LinearLayout>
+                </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/linear04"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/linear12">
+                <LinearLayout
+                    android:id="@+id/linear02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linear01">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:text="Personality Traits"
-                android:textSize="24sp"
-                app:fontFamily="@font/balladehf" />
+                    <TextView
+                        android:id="@+id/character_bg_background"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:foregroundGravity="left"
+                        android:gravity="left"
+                        android:text="One small step for man, one big yeet for mankind"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:fontFamily="@font/balladehf" />
+                </LinearLayout>
 
-            <ImageButton
-                android:id="@+id/imageButton01"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/edit" />
+                <LinearLayout
+                    android:id="@+id/linear03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linear02">
 
-        </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Alignment"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:textSize="24sp"
+                        app:fontFamily="@font/balladehf" />
 
-    <LinearLayout
-        android:id="@+id/linear05"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/linear04">
+                    <ImageButton
+                        android:id="@+id/imageButton22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/edit" />
 
-        <ListView
-            android:id="@+id/persview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:fontFamily="@font/balladehf"
-            android:textSize="18sp">
-        </ListView>
+                </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/linear12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linear03">
+
+                    <TextView
+                        android:id="@+id/character_bg_alignment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="neutral good"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:fontFamily="@font/balladehf" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear04"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linear12">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Personality Traits"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:textSize="24sp"
+                        app:fontFamily="@font/balladehf" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/edit" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear05"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linear04">
+
+                    <TextView
+                        android:id="@+id/character_bg_traits"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:gravity="left"
+                        app:fontFamily="@font/balladehf"></TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linear05">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Features"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:textSize="24sp"
+                        app:fontFamily="@font/balladehf" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/edit" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linear15">
+
+                    <TextView
+                        android:id="@+id/character_bg_features"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="have those"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:fontFamily="@font/balladehf" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear06"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linear16">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Bonds"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        app:fontFamily="@font/balladehf" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/edit" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear07"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linear06">
+
+                    <TextView
+                        android:id="@+id/character_bg_bonds"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="jeff"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:fontFamily="@font/balladehf" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear08"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linear07">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Flaws"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:textSize="24sp"
+                        app:fontFamily="@font/balladehf" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/edit" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear09"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linear08">
+
+                    <TextView
+                        android:id="@+id/character_bg_flaws"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="allergic to nuts"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:fontFamily="@font/balladehf" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linear09">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Ideals"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:textSize="24sp"
+                        app:fontFamily="@font/balladehf" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/edit" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linear10">
+
+                    <TextView
+                        android:id="@+id/character_bg_ideals"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="a functioning dnd character sheet app that has more than a week of development time"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:fontFamily="@font/balladehf" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linear13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linear11">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Languages"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:textSize="24sp"
+                        app:fontFamily="@font/balladehf" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/edit" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linear13">
+
+                    <TextView
+                        android:id="@+id/character_bg_languages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Common"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:fontFamily="@font/balladehf" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
-
-    <LinearLayout
-        android:id="@+id/linear06"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/linear05">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:textSize="24sp"
-            android:text="Bonds"
-            app:fontFamily="@font/balladehf" />
-
-        <ImageButton
-            android:id="@+id/imageButton02"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/edit" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linear07"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/linear06">
-
-        <TextView
-            android:id="@+id/bondstext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="jeff"
-            android:textSize="18sp"
-            app:fontFamily="@font/balladehf" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linear08"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/linear07">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:gravity="left"
-            android:text="Flaws"
-            app:fontFamily="@font/balladehf" />
-
-        <ImageButton
-            android:id="@+id/imageButton03"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/edit" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linear09"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/linear08">
-
-        <TextView
-            android:id="@+id/flawstext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="allergic to nuts"
-            android:textSize="18sp"
-            app:fontFamily="@font/balladehf" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linear10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/linear09">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:textSize="24sp"
-            android:text="Ideals"
-            app:fontFamily="@font/balladehf" />
-
-        <ImageButton
-            android:id="@+id/imageButton04"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/edit" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linear11"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/linear10">
-
-        <TextView
-            android:id="@+id/idealstext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="a functioning dnd character sheet app that has more than a week of development time"
-            android:textSize="18sp"
-            app:fontFamily="@font/balladehf" />
-    </LinearLayout>
-    </LinearLayout>
     <LinearLayout
         android:id="@+id/nav"
         android:layout_width="match_parent"
@@ -351,10 +469,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
+            android:onClick="showAttacks"
             android:paddingTop="25sp"
             android:paddingBottom="25sp"
             android:scaleType="fitCenter"
-            android:onClick="showAttacks"
             android:scaleX="1"
             android:scaleY="1"
             app:srcCompat="@drawable/attacks" />
@@ -365,10 +483,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
+            android:onClick="showStats"
             android:paddingTop="25sp"
             android:paddingBottom="25sp"
             android:scaleType="fitCenter"
-            android:onClick="showStats"
             android:scaleX="1"
             android:scaleY="1"
             app:srcCompat="@drawable/stats" />
@@ -378,12 +496,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/black"
             android:paddingTop="25sp"
             android:paddingBottom="25sp"
             android:scaleType="fitCenter"
             android:scaleX="1"
             android:scaleY="1"
+            android:tint="@color/white"
             app:srcCompat="@drawable/background" />
 
         <ImageButton
