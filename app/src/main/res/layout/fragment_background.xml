@@ -34,11 +34,24 @@
             android:textColor="@color/colorSecondaryDark"
             app:fontFamily="@font/livingst"/>
 
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="@color/colorAccent"
-            android:scrollbars="horizontal"/>
+            android:layout_height="350dp"
+            android:background="@color/colorAccent">
+
+            <EditText
+                android:id="@+id/backgroundText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Enter Background Story"
+                android:scrollbars="horizontal"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@color/black"
+                android:textColor="@color/colorSecondaryDark"
+                app:fontFamily="@font/acme" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
