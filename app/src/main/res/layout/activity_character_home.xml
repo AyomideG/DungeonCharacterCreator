@@ -424,6 +424,7 @@
             android:paddingTop="25sp"
             android:paddingBottom="25sp"
             android:scaleType="fitCenter"
+            android:onClick="showInventory"
             android:scaleX="1"
             android:scaleY="1"
             app:srcCompat="@drawable/inventory"

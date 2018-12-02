@@ -78,6 +78,12 @@ public class CharacterHomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void showInventory(View view){
+        Intent intent = new Intent(this, CharacterInventoryActivity.class);
+        intent.putExtra("CHARACTER_NAME", myCharacter.getName());
+        startActivity(intent);
+    }
+
     public void showNotes(View view){
         Intent intent = new Intent(this, NoteActivity.class);
         intent.putExtra("CHARACTER_NAME", myCharacter.getName());
