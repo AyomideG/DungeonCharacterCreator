@@ -187,7 +187,14 @@
             android:scaleX="1"
             android:scaleY="1"
             app:srcCompat="@drawable/notes"
-        android:tint="@color/white"/>
+            android:tint="@color/white"/>
+
     </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/note_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"></android.support.v4.view.ViewPager>
 
 </android.support.constraint.ConstraintLayout>
