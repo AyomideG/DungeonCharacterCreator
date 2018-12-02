@@ -66,9 +66,9 @@
                 android:id="@+id/imageButton10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="showEditDialog"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/edit"
-                />
+                app:srcCompat="@drawable/edit" />
         </LinearLayout>
 
         <LinearLayout
@@ -84,7 +84,10 @@
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
+                android:background="@drawable/circle_button"
+                android:onClick="decHealth"
                 android:text="-"
+                android:textColor="@color/white"
                 android:textSize="30sp" />
 
             <LinearLayout
@@ -123,7 +126,10 @@
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
+                android:background="@drawable/circle_button"
+                android:onClick="incHealth"
                 android:text="+"
+                android:textColor="@color/colorAccent"
                 android:textSize="30sp" />
 
         </LinearLayout>

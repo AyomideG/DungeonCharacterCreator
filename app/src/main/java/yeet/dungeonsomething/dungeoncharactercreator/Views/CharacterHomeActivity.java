@@ -15,6 +15,7 @@ import yeet.dungeonsomething.dungeoncharactercreator.Model.Character;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Note;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Statistics;
 import yeet.dungeonsomething.dungeoncharactercreator.R;
+import yeet.dungeonsomething.dungeoncharactercreator.Views.Dialogs.HomeData;
 
 public class CharacterHomeActivity extends AppCompatActivity {
 
@@ -65,6 +66,19 @@ public class CharacterHomeActivity extends AppCompatActivity {
         return c;
     }
 
+    public void incHealth(View view){
+        myCharacter.setHealthPoints(myCharacter.getHealthPoints()+1);
+        ((TextView) findViewById(R.id.character_home_hp)).setText(String.valueOf(myCharacter.getHealthPoints()));
+    }
+    public void decHealth(View view){
+        myCharacter.setHealthPoints(myCharacter.getHealthPoints()-1);
+        ((TextView) findViewById(R.id.character_home_hp)).setText(String.valueOf(myCharacter.getHealthPoints()));
+    }
+    public void showEditDialog(View view){
+        HomeData hd= new HomeData();
+        hd.show(getFragmentManager(),"Edit");
+
+    }
 
     public void showAttacks(View view){
         Intent intent = new Intent(this, AttacksActivity.class);
