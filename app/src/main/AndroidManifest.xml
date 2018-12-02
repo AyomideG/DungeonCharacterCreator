@@ -23,10 +23,11 @@
                 <category android:name="android.intent.category.HOME" />
             </intent-filter>
         </activity>
-        <activity android:name=".Views.AttacksActivity" />
-        <activity android:name=".Views.StatsActivity" />
-        <activity android:name=".Views.WizardTabsActivity" />
-        <activity android:name=".Views.CharacterBGActivity" />
+        <activity android:name=".Views.AttacksActivity"></activity>
+        <activity android:name=".Views.StatsActivity"></activity>
+        <activity android:name=".Views.WizardTabsActivity"></activity>
+        <activity android:name=".Views.CharacterBGActivity"></activity>
+        <activity android:name=".Views.NoteActivity"></activity>
         <activity android:name=".Views.CharacterInventoryActivity"></activity>
     </application>
 
