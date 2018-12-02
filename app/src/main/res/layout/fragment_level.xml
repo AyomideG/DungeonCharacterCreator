@@ -32,11 +32,13 @@
             android:textSize="15dp"
             app:fontFamily="@font/livingst" />
 
-        <com.weiwangcn.betterspinner.library.BetterSpinner
+        <Spinner
+            android:id="@+id/levelSpinner"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:focusableInTouchMode="false"
             android:layout_marginBottom="15dp"
+            android:text="Select Level"
             android:textColor="@color/colorSecondaryDark"
             app:fontFamily="@font/balladehf" />
 
