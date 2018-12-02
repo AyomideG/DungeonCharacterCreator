@@ -7,9 +7,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 import yeet.dungeonsomething.dungeoncharactercreator.APIDataManager;
 import yeet.dungeonsomething.dungeoncharactercreator.CharacterManager;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Character;
+import yeet.dungeonsomething.dungeoncharactercreator.Model.Note;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Statistics;
 import yeet.dungeonsomething.dungeoncharactercreator.R;
 
@@ -36,6 +39,8 @@ public class CharacterHomeActivity extends AppCompatActivity {
             myCharacter.setRace(APIDataManager.getInstance(getAssets()).getRaces()[0]);
             myCharacter.setMyclass(APIDataManager.getInstance(getAssets()).getClasses()[0]);
             myCharacter.setStats(new Statistics());
+            myCharacter.getNotes().add(new Note("Title0", "SOME DESCRIPTION THAT HAPPENS TO BE REALLY REALLY REALLY SUPERDUPERPOOPERSCOOPER LONG"));
+            myCharacter.getNotes().add(new Note("Title1", "SOME DESCRIPTION"));
             CharacterManager.getInstance(getAssets()).newCharacter(myCharacter);
         }
     }

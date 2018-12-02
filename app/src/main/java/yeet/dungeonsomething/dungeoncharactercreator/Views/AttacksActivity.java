@@ -1,6 +1,7 @@
 package yeet.dungeonsomething.dungeoncharactercreator.Views;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -81,6 +82,28 @@ public class AttacksActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.character_home_race)).setText(myCharacter.getRace().getName());
         ((TextView) findViewById(R.id.character_home_class)).setText(myCharacter.getMyclass().getName());
         ((TextView) findViewById(R.id.character_home_level)).setText(String.valueOf(myCharacter.getLevel()));
+    }
+
+    public void showAttacks(View view){
+        Intent intent = new Intent(this, AttacksActivity.class);
+        intent.putExtra("CHARACTER_NAME", myCharacter.getName());
+        startActivity(intent);
+    }
+    public void showStats(View view) {
+        Intent intent = new Intent(this, StatsActivity.class);
+        startActivity(intent);
+    }
+    public void showBackground(View view) {
+        Intent intent = new Intent(this, CharacterBGActivity.class);
+        startActivity(intent);
+    }
+    public void showNotes(View view) {
+        Intent intent = new Intent(this, NoteActivity.class);
+        startActivity(intent);
+    }
+    public void showInventory(View view) {
+        Intent intent = new Intent(this, CharacterInventoryActivity.class);
+        startActivity(intent);
     }
 
     public static class CustomExpandableListAdapter extends BaseExpandableListAdapter {

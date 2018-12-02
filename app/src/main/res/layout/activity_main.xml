@@ -24,6 +24,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="10dp"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:tint="@color/colorAccent"
+            android:translationY="-20sp"
             app:srcCompat="@mipmap/ic_launcher_foreground"
             tools:ignore="VectorDrawableCompat" />
 

@@ -53,7 +53,7 @@
                 app:fontFamily="@font/balladehf" />
 
             <TextView
-                android:id="@+id/characterLevel"
+                android:id="@+id/character_home_level"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -157,6 +157,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
+            android:onClick="showAttacks"
             android:paddingTop="25sp"
             android:paddingBottom="25sp"
             android:scaleType="fitCenter"
@@ -185,6 +186,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
+            android:onClick="showBackground"
             android:paddingTop="25sp"
             android:paddingBottom="25sp"
             android:scaleType="fitCenter"
@@ -198,6 +200,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
+            android:onClick="showInventory"
             android:paddingTop="25sp"
             android:paddingBottom="25sp"
             android:scaleType="fitCenter"
@@ -211,6 +214,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
+            android:onClick="showNotes"
             android:paddingTop="25sp"
             android:paddingBottom="25sp"
             android:scaleType="fitCenter"

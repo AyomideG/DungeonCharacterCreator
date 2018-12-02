@@ -1,18 +1,25 @@
 package yeet.dungeonsomething.dungeoncharactercreator.Views;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.TextView;
 
+import yeet.dungeonsomething.dungeoncharactercreator.CharacterManager;
+import yeet.dungeonsomething.dungeoncharactercreator.Model.Character;
 import yeet.dungeonsomething.dungeoncharactercreator.R;
 
 public class StatsActivity extends AppCompatActivity {
+    Character myCharacter;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_stats);
+        setContentView(R.layout.activity_character_stats);
 
+        myCharacter = CharacterManager.getInstance(null).getCharacter();
 
         TabLayout layout = (TabLayout) findViewById(R.id.stats_layout);
         layout.getTabAt(0).setText("STR");
@@ -43,5 +50,35 @@ public class StatsActivity extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
             }
         });
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        ((TextView) findViewById(R.id.character_home_name)).setText(myCharacter.getName());
+        ((TextView) findViewById(R.id.character_home_race)).setText(myCharacter.getRace().getName());
+        ((TextView) findViewById(R.id.character_home_class)).setText(myCharacter.getMyclass().getName());
+        ((TextView) findViewById(R.id.character_home_level)).setText(String.valueOf(myCharacter.getLevel()));
+    }
+
+    public void showAttacks(View view){
+        Intent intent = new Intent(this, AttacksActivity.class);
+        startActivity(intent);
+    }
+    public void showStats(View view) {
+        Intent intent = new Intent(this, StatsActivity.class);
+        startActivity(intent);
+    }
+    public void showBackground(View view) {
+        Intent intent = new Intent(this, CharacterBGActivity.class);
+        startActivity(intent);
+    }
+    public void showNotes(View view) {
+        Intent intent = new Intent(this, NoteActivity.class);
+        startActivity(intent);
+    }
+    public void showInventory(View view) {
+        Intent intent = new Intent(this, CharacterInventoryActivity.class);
+        startActivity(intent);
     }
 }

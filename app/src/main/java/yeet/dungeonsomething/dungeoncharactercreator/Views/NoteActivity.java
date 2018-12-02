@@ -43,4 +43,21 @@ public class NoteActivity extends AppCompatActivity {
     private ArrayList<Note> getNotes() {
         return CharacterManager.getInstance(getAssets()).getCharacter().getNotes();
     }
+
+    public void showAttacks(View view){
+        Intent intent = new Intent(this, AttacksActivity.class);
+        startActivity(intent);
+    }
+    public void showStats(View view) {
+        Intent intent = new Intent(this, StatsActivity.class);
+        startActivity(intent);
+    }
+    public void showBackground(View view) {
+        Intent intent = new Intent(this, CharacterBGActivity.class);
+        startActivity(intent);
+    }
+    public void showInventory(View view) {
+        Intent intent = new Intent(this, CharacterInventoryActivity.class);
+        startActivity(intent);
+    }
 }

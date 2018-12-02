@@ -83,10 +83,21 @@ public class CharacterInventoryActivity extends AppCompatActivity {
         intent.putExtra("CHARACTER_NAME", myCharacter.getName());
         startActivity(intent);
     }
-
     public void showStats(View view) {
         Intent intent = new Intent(this, StatsActivity.class);
         intent.putExtra("CHARACTER_NAME", myCharacter.getName());
+        startActivity(intent);
+    }
+    public void showBackground(View view) {
+        Intent intent = new Intent(this, CharacterBGActivity.class);
+        startActivity(intent);
+    }
+    public void showNotes(View view) {
+        Intent intent = new Intent(this, NoteActivity.class);
+        startActivity(intent);
+    }
+    public void showInventory(View view) {
+        Intent intent = new Intent(this, CharacterInventoryActivity.class);
         startActivity(intent);
     }
 
