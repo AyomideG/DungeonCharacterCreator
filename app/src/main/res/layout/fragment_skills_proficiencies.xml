@@ -21,7 +21,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Please select a value for your character's ability and select from the list of Proficiencies."
+                android:text="Please enter a value for your character's ability and select from the list of Proficiencies."
                 android:textColor="@color/colorSecondaryDark"
                 android:textSize="15dp"
                 app:fontFamily="@font/livingst" />
@@ -42,11 +42,14 @@
                     app:fontFamily="@font/livingst" />
 
                 <EditText
+                    android:id="@+id/strText"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="15dp"
                     android:textColor="@color/colorSecondaryDark"
-                    app:fontFamily="@font/balladehf"/>
+                    app:fontFamily="@font/balladehf"
+                    android:cursorVisible="true"
+                    android:textCursorDrawable="@color/black"/>
 
             </LinearLayout>
 
@@ -80,11 +83,14 @@
                     app:fontFamily="@font/livingst" />
 
                 <EditText
+                    android:id="@+id/dexText"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="15dp"
                     android:textColor="@color/colorSecondaryDark"
-                    app:fontFamily="@font/balladehf"/>
+                    app:fontFamily="@font/balladehf"
+                    android:cursorVisible="true"
+                    android:textCursorDrawable="@color/black"/>
 
             </LinearLayout>
 
@@ -132,11 +138,14 @@
                     app:fontFamily="@font/livingst" />
 
                 <EditText
+                    android:id="@+id/conText"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="15dp"
                     android:textColor="@color/colorSecondaryDark"
-                    app:fontFamily="@font/balladehf"/>
+                    app:fontFamily="@font/balladehf"
+                    android:cursorVisible="true"
+                    android:textCursorDrawable="@color/black"/>
 
             </LinearLayout>
 
@@ -163,11 +172,14 @@
                     app:fontFamily="@font/livingst" />
 
                 <EditText
+                    android:id="@+id/intText"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="15dp"
                     android:textColor="@color/colorSecondaryDark"
-                    app:fontFamily="@font/balladehf"/>
+                    app:fontFamily="@font/balladehf"
+                    android:cursorVisible="true"
+                    android:textCursorDrawable="@color/black"/>
 
             </LinearLayout>
 
@@ -229,11 +241,14 @@
                     app:fontFamily="@font/livingst" />
 
                 <EditText
+                    android:id="@+id/wisText"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="15dp"
                     android:textColor="@color/colorSecondaryDark"
-                    app:fontFamily="@font/balladehf" />
+                    app:fontFamily="@font/balladehf"
+                    android:cursorVisible="true"
+                    android:textCursorDrawable="@color/black"/>
 
             </LinearLayout>
 
@@ -295,11 +310,14 @@
                     app:fontFamily="@font/livingst" />
 
                 <EditText
+                    android:id="@+id/chaText"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="15dp"
                     android:textColor="@color/colorSecondaryDark"
-                    app:fontFamily="@font/balladehf" />
+                    app:fontFamily="@font/balladehf"
+                    android:cursorVisible="true"
+                    android:textCursorDrawable="@color/black"/>
 
             </LinearLayout>
 
