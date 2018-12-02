@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/attack_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10sp"
+    android:paddingLeft="10sp"
+    android:paddingRight="10sp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/border"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/attack_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Some really longName"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:fontFamily="@font/balladehf" />
+
+            <TextView
+                android:id="@+id/attack_modifier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="+2"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:fontFamily="@font/balladehf" />
+
+            <TextView
+                android:id="@+id/attack_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Range"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:fontFamily="@font/balladehf" />
+
+            <TextView
+                android:id="@+id/attack_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Type"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:fontFamily="@font/balladehf" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/attack_damage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2d6"
+            android:textColor="@color/black"
+            android:textSize="36sp"
+            app:fontFamily="@font/balladehf" />
+    </LinearLayout>
+</LinearLayout>

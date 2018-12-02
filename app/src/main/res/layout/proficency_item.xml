@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="60sp"
+    android:paddingRight="60sp">
 
     <CheckBox
         android:id="@+id/prof_check"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Proficency Name"
-        android:fontFamily="@font/balladehf"/>
+        app:fontFamily="@font/balladehf"
+        android:text="Proficency Name" />
 
     <TextView
         android:id="@+id/prof_bomus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="+2"
-        android:fontFamily="@font/balladehf"/>
+        app:fontFamily="@font/balladehf"
+        android:gravity="right"
+        android:text="+2" />
 </LinearLayout>
