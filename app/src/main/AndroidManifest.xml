@@ -27,6 +27,7 @@
         <activity android:name=".Views.StatsActivity"></activity>
         <activity android:name=".Views.WizardTabsActivity"></activity>
         <activity android:name=".Views.CharacterBGActivity"></activity>
+        <activity android:name=".Views.NoteActivity"></activity>
     </application>
 
 </manifest>
