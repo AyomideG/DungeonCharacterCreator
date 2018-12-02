@@ -131,11 +131,13 @@ public class CharacterBGActivity extends AppCompatActivity {
 
     public void showAttacks(View v) {
         Intent intent = new Intent(this, AttacksActivity.class);
+        intent.putExtra("CHARACTER_NAME", myCharacter.getName());
         startActivity(intent);
     }
 
     public void showStats(View view) {
         Intent intent = new Intent(this, StatsActivity.class);
+        intent.putExtra("CHARACTER_NAME", myCharacter.getName());
         startActivity(intent);
     }
 

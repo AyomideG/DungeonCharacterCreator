@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.CharacterInventoryActivity">
+
+    <LinearLayout
+        android:id="@+id/linearlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/character_inv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:fontFamily="@font/balladehf" />
+
+        <TextView
+            android:id="@+id/character_inv_race"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingRight="5sp"
+            android:text="Race"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:fontFamily="@font/balladehf" />
+
+        <TextView
+            android:id="@+id/character_inv_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Class"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:fontFamily="@font/balladehf" />
+
+        <TextView
+            android:id="@+id/character_inv_Level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Level"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:fontFamily="@font/balladehf" />
+
+        <ImageButton
+            android:id="@+id/imageButton01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/edit" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/titlerow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <TextView
+            android:id="@+id/invTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:padding="10sp"
+            android:text="Inventory"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:fontFamily="@font/balladehf" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/invContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/titlerow">
+
+        <LinearLayout
+            android:id="@+id/sorting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="Sort By:"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:fontFamily="@font/balladehf" />
+
+            <com.weiwangcn.betterspinner.library.BetterSpinner
+                android:id="@+id/sortSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="24sp"
+                android:layout_weight="1"
+                android:focusableInTouchMode="false"
+                android:gravity="right"
+                android:textColor="@color/black"
+                app:fontFamily="@font/balladehf" />
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/invlist"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/header">
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/addItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/nav">
+
+            <Button
+                android:id="@+id/addItemButton"
+                android:layout_width="50sp"
+                android:layout_height="30sp"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center_horizontal"
+                android:text="+"
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="24sp"
+                app:fontFamily="@font/balladehf" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:baselineAligned="false"
+        android:gravity="bottom|end"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/linearlay">
+
+        <ImageButton
+            android:id="@+id/toAttacks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="showAttacks"
+            android:paddingTop="25sp"
+            android:paddingBottom="25sp"
+            android:scaleType="fitCenter"
+            android:scaleX="1"
+            android:scaleY="1"
+            app:srcCompat="@drawable/attacks" />
+
+        <ImageButton
+            android:id="@+id/toStats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:paddingTop="25sp"
+            android:paddingBottom="25sp"
+            android:scaleType="fitCenter"
+            android:scaleX="1"
+            android:scaleY="1"
+            app:srcCompat="@drawable/stats" />
+
+        <ImageButton
+            android:id="@+id/toBG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:paddingTop="25sp"
+            android:paddingBottom="25sp"
+            android:scaleType="fitCenter"
+            android:scaleX="1"
+            android:scaleY="1"
+            app:srcCompat="@drawable/background" />
+
+        <ImageButton
+            android:id="@+id/toInv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:paddingTop="25sp"
+            android:paddingBottom="25sp"
+            android:scaleType="fitCenter"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/inventory" />
+
+        <ImageButton
+            android:id="@+id/toNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:paddingTop="25sp"
+            android:paddingBottom="25sp"
+            android:scaleType="fitCenter"
+            android:scaleX="1"
+            android:scaleY="1"
+            app:srcCompat="@drawable/notes" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
