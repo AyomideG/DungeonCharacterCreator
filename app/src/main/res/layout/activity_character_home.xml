@@ -7,172 +7,271 @@
     tools:context=".Views.CharacterHomeActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/header"
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryDark"
-            android:gravity="bottom"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/character_home_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Name"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                app:fontFamily="@font/balladehf" />
-
-            <TextView
-                android:id="@+id/character_home_race"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:paddingRight="5sp"
-                android:text="Race"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                app:fontFamily="@font/balladehf" />
-
-            <TextView
-                android:id="@+id/character_home_class"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Class"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                app:fontFamily="@font/balladehf" />
-
-            <TextView
-                android:id="@+id/character_home_level"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Level"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                app:fontFamily="@font/balladehf" />
-
-            <ImageButton
-                android:id="@+id/imageButton10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="showEditDialog"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/edit" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/healthRow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:gravity="center_vertical|center_horizontal"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/damage"
-                android:layout_width="60sp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:background="@drawable/circle_button"
-                android:onClick="decHealth"
-                android:text="-"
-                android:textColor="@color/white"
-                android:textSize="30sp" />
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/header"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:orientation="vertical">
+                android:background="@color/colorPrimaryDark"
+                android:gravity="bottom"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/character_home_hp"
+                    android:id="@+id/character_home_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Name"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:fontFamily="@font/balladehf" />
+
+                <TextView
+                    android:id="@+id/character_home_race"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="5sp"
+                    android:text="Race"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:fontFamily="@font/balladehf" />
+
+                <TextView
+                    android:id="@+id/character_home_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Class"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:fontFamily="@font/balladehf" />
+
+                <TextView
+                    android:id="@+id/character_home_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Level"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:fontFamily="@font/balladehf" />
+
+                <ImageButton
+                    android:id="@+id/imageButton10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="showEditDialog"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/edit" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/healthRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/damage"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:background="@drawable/circle_button"
+                    android:onClick="decHealth"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
-                    android:gravity="center"
-                    android:paddingLeft="10sp"
-                    android:paddingRight="10sp"
-                    android:text="17"
-                    android:textColor="@color/colorSecondaryDark"
-                    android:textSize="100sp"
-                    app:fontFamily="@font/balladehf" />
-
-                <TextView
-                    android:id="@+id/textView17"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:gravity="center"
-                    android:text="Health"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    app:fontFamily="@font/balladehf" />
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/heal"
-                android:layout_width="60sp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:background="@drawable/circle_button"
-                android:onClick="incHealth"
-                android:text="+"
-                android:textColor="@color/colorAccent"
-                android:textSize="30sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/coreStats"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5sp"
-            android:layout_marginLeft="5sp"
-            android:layout_marginRight="5sp"
-            android:background="@drawable/border"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="fill_horizontal|center"
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/character_home_armor_class"
+                        android:id="@+id/character_home_hp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:gravity="center"
+                        android:paddingLeft="10sp"
+                        android:paddingRight="10sp"
+                        android:text="17"
+                        android:textColor="@color/colorSecondaryDark"
+                        android:textSize="100sp"
+                        app:fontFamily="@font/balladehf" />
+
+                    <TextView
+                        android:id="@+id/textView17"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
                         android:gravity="center"
-                        android:text="16"
+                        android:text="Health"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:fontFamily="@font/balladehf" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/heal"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:background="@drawable/circle_button"
+                    android:onClick="incHealth"
+                    android:text="+"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/coreStats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:background="@drawable/border"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="fill_horizontal|center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/character_home_armor_class"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:gravity="center"
+                            android:text="16"
+                            android:textColor="@color/colorSecondaryDark"
+                            android:textSize="40sp"
+                            app:fontFamily="@font/balladehf" />
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Armor"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:fontFamily="@font/balladehf" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/character_home_initative"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="+2"
+                            android:textColor="@color/colorSecondaryDark"
+                            android:textSize="40sp"
+                            app:fontFamily="@font/balladehf" />
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Initiative"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:fontFamily="@font/balladehf" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/character_home_speed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="20ft"
+                            android:textColor="@color/colorSecondaryDark"
+                            android:textSize="40sp"
+                            app:fontFamily="@font/balladehf" />
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Speed"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:fontFamily="@font/balladehf" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ectRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10sp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/hitDice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="2d6"
                         android:textColor="@color/colorSecondaryDark"
                         android:textSize="40sp"
                         app:fontFamily="@font/balladehf" />
 
                     <TextView
-                        android:id="@+id/textView9"
+                        android:id="@+id/textView12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Armor"
+                        android:text="Hit Dice"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         app:fontFamily="@font/balladehf" />
@@ -180,277 +279,184 @@
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/character_home_initative"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="+2"
-                        android:textColor="@color/colorSecondaryDark"
-                        android:textSize="40sp"
-                        app:fontFamily="@font/balladehf" />
-
-                    <TextView
-                        android:id="@+id/textView10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Initiative"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        app:fontFamily="@font/balladehf" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/character_home_speed"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="20ft"
-                        android:textColor="@color/colorSecondaryDark"
-                        android:textSize="40sp"
-                        app:fontFamily="@font/balladehf" />
-
-                    <TextView
-                        android:id="@+id/textView11"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Speed"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        app:fontFamily="@font/balladehf" />
-                </LinearLayout>
-
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ectRow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10sp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/hitDice"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10sp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="2d6"
-                    android:textColor="@color/colorSecondaryDark"
-                    android:textSize="40sp"
-                    app:fontFamily="@font/balladehf" />
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Hit Dice"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    app:fontFamily="@font/balladehf" />
+                    <LinearLayout
+                        android:id="@+id/passingSaves"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorSecondary2"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Pass"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:fontFamily="@font/balladehf" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/failingSaves"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorSecondary"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView16"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Fail"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:fontFamily="@font/balladehf" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0" />
+                    </LinearLayout>
+
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="10sp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:id="@+id/passingSaves"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorSecondary2"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView15"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="Pass"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        app:fontFamily="@font/balladehf" />
-
-                    <CheckBox
-                        android:id="@+id/checkBox"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <CheckBox
-                        android:id="@+id/checkBox2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <CheckBox
-                        android:id="@+id/checkBox3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/failingSaves"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorSecondary"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView16"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="Fail"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        app:fontFamily="@font/balladehf" />
-
-                    <CheckBox
-                        android:id="@+id/checkBox4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0" />
-
-                    <CheckBox
-                        android:id="@+id/checkBox5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0" />
-
-                    <CheckBox
-                        android:id="@+id/checkBox6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0" />
-                </LinearLayout>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
             </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/nav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_weight="0"
+            android:background="@color/colorPrimaryDark"
+            android:baselineAligned="false"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout">
+
+            <ImageButton
+                android:id="@+id/toAttacks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:onClick="showAttacks"
+                android:paddingTop="25sp"
+                android:paddingBottom="25sp"
+                android:scaleType="fitCenter"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/attacks" />
+
+            <ImageButton
+                android:id="@+id/toStats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:onClick="showStats"
+                android:paddingTop="25sp"
+                android:paddingBottom="25sp"
+                android:scaleType="fitCenter"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/stats" />
+
+            <ImageButton
+                android:id="@+id/toBG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:onClick="showBG"
+                android:paddingTop="25sp"
+                android:paddingBottom="25sp"
+                android:scaleType="fitCenter"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/background" />
+
+            <ImageButton
+                android:id="@+id/toInv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:onClick="showInventory"
+                android:paddingTop="25sp"
+                android:paddingBottom="25sp"
+                android:scaleType="fitCenter"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/inventory" />
+
+            <ImageButton
+                android:id="@+id/toNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:onClick="showNotes"
+                android:paddingTop="25sp"
+                android:paddingBottom="25sp"
+                android:scaleType="fitCenter"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/notes" />
 
         </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/nav"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
-        android:baselineAligned="false"
-        android:gravity="bottom"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout">
-
-        <ImageButton
-            android:id="@+id/toAttacks"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:paddingTop="25sp"
-            android:paddingBottom="25sp"
-            android:scaleType="fitCenter"
-            android:scaleX="1"
-            android:scaleY="1"
-            app:srcCompat="@drawable/attacks"
-            android:tint="@color/white"
-            android:onClick="showAttacks"
-            />
-
-        <ImageButton
-            android:id="@+id/toStats"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:onClick="showStats"
-            android:paddingTop="25sp"
-            android:paddingBottom="25sp"
-            android:scaleType="fitCenter"
-            android:scaleX="1"
-            android:scaleY="1"
-            android:tint="@color/white"
-            app:srcCompat="@drawable/stats" />
-
-        <ImageButton
-            android:id="@+id/toBG"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:paddingTop="25sp"
-            android:paddingBottom="25sp"
-            android:scaleType="fitCenter"
-            android:onClick="showBG"
-            android:scaleX="1"
-            android:scaleY="1"
-            app:srcCompat="@drawable/background"
-            android:tint="@color/white"
-            />
-
-        <ImageButton
-            android:id="@+id/toInv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:paddingTop="25sp"
-            android:paddingBottom="25sp"
-            android:scaleType="fitCenter"
-            android:onClick="showInventory"
-            android:scaleX="1"
-            android:scaleY="1"
-            app:srcCompat="@drawable/inventory"
-            android:tint="@color/white"/>
-
-        <ImageButton
-            android:id="@+id/toNotes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="showNotes"
-            android:background="@color/colorPrimaryDark"
-            android:paddingTop="25sp"
-            android:paddingBottom="25sp"
-            android:scaleType="fitCenter"
-            android:scaleX="1"
-            android:scaleY="1"
-            app:srcCompat="@drawable/notes"
-            android:tint="@color/white"/>
-
     </LinearLayout>
 
 

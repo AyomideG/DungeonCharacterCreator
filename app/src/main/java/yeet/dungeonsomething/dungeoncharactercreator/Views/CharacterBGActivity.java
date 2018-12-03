@@ -52,6 +52,13 @@ public class CharacterBGActivity extends AppCompatActivity {
             ifNull = true;
         }
 
+        findViewById(R.id.titlerow).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showHome(v);
+            }
+        });
+
     }
 
     @Override
@@ -149,6 +156,10 @@ public class CharacterBGActivity extends AppCompatActivity {
     }
     public void showInventory(View view) {
         Intent intent = new Intent(this, CharacterInventoryActivity.class);
+        startActivity(intent);
+    }
+    public void showHome(View view) {
+        Intent intent = new Intent(this, CharacterHomeActivity.class);
         startActivity(intent);
     }
 

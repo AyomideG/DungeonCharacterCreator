@@ -13,6 +13,7 @@ import yeet.dungeonsomething.dungeoncharactercreator.APIDataManager;
 import yeet.dungeonsomething.dungeoncharactercreator.CharacterManager;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Character;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Note;
+import yeet.dungeonsomething.dungeoncharactercreator.Model.Skill;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Statistics;
 import yeet.dungeonsomething.dungeoncharactercreator.R;
 import yeet.dungeonsomething.dungeoncharactercreator.Views.Dialogs.HomeData;
@@ -42,20 +43,17 @@ public class CharacterHomeActivity extends AppCompatActivity {
             myCharacter.setStats(new Statistics());
             myCharacter.getNotes().add(new Note("Title0", "SOME DESCRIPTION THAT HAPPENS TO BE REALLY REALLY REALLY SUPERDUPERPOOPERSCOOPER LONG"));
             myCharacter.getNotes().add(new Note("Title1", "SOME DESCRIPTION"));
+            Skill[] skills = APIDataManager.getInstance(getAssets()).getSkills();
+            Log.i("SKILL", "adding " + skills[0].getName());
+            myCharacter.getSkillsProficentIn().add(skills[0]);
+
             CharacterManager.getInstance(getAssets()).newCharacter(myCharacter);
         }
     }
     @Override
     public void onStart() {
         super.onStart();
-        ((TextView) findViewById(R.id.character_home_name)).setText(myCharacter.getName());
-        ((TextView) findViewById(R.id.character_home_race)).setText(myCharacter.getRace().getName());
-        ((TextView) findViewById(R.id.character_home_class)).setText(myCharacter.getMyclass().getName());
-        ((TextView) findViewById(R.id.character_home_level)).setText(String.valueOf(myCharacter.getLevel()));
-        ((TextView) findViewById(R.id.character_home_armor_class)).setText(String.valueOf(myCharacter.getArmorClass()));
-        ((TextView) findViewById(R.id.character_home_initative)).setText(String.valueOf("TBD"));
-        ((TextView) findViewById(R.id.character_home_speed)).setText(myCharacter.getRace().getSpeed() + "ft");
-        ((TextView) findViewById(R.id.character_home_hp)).setText(String.valueOf(myCharacter.getHealthPoints()));
+        updateView();
     }
 
     private Character loadMyCharacterData(Bundle b){
@@ -78,6 +76,17 @@ public class CharacterHomeActivity extends AppCompatActivity {
         HomeData hd= new HomeData();
         hd.show(getFragmentManager(),"Edit");
 
+    }
+
+    public void updateView(){
+        ((TextView) findViewById(R.id.character_home_name)).setText(myCharacter.getName());
+        ((TextView) findViewById(R.id.character_home_race)).setText(myCharacter.getRace().getName());
+        ((TextView) findViewById(R.id.character_home_class)).setText(myCharacter.getMyclass().getName());
+        ((TextView) findViewById(R.id.character_home_level)).setText(String.valueOf(myCharacter.getLevel()));
+        ((TextView) findViewById(R.id.character_home_armor_class)).setText(String.valueOf(myCharacter.getArmorClass()));
+        ((TextView) findViewById(R.id.character_home_initative)).setText(String.valueOf("TBD"));
+        ((TextView) findViewById(R.id.character_home_speed)).setText(myCharacter.getRace().getSpeed() + "ft");
+        ((TextView) findViewById(R.id.character_home_hp)).setText(String.valueOf(myCharacter.getHealthPoints()));
     }
 
     public void showAttacks(View view){

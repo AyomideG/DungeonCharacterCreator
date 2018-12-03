@@ -54,6 +54,14 @@ public class NoteActivity extends AppCompatActivity {
         listView = findViewById(R.id.explistNotes);
         adapter = new CustomExpandableListAdapter(getBaseContext(), titles, details);
         listView.setAdapter(adapter);
+
+        findViewById(R.id.backContainer).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showHome(v);
+            }
+        });
+
     }
 
     private ArrayList<Note> getNotes() {
@@ -74,6 +82,10 @@ public class NoteActivity extends AppCompatActivity {
     }
     public void showInventory(View view) {
         Intent intent = new Intent(this, CharacterInventoryActivity.class);
+        startActivity(intent);
+    }
+    public void showHome(View view) {
+        Intent intent = new Intent(this, CharacterHomeActivity.class);
         startActivity(intent);
     }
 

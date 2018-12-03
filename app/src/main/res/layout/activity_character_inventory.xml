@@ -77,6 +77,17 @@
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/header">
 
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:background="@color/colorPrimary"
+            android:paddingTop="5sp"
+            android:paddingBottom="5sp"
+            android:tint="@color/black"
+            app:srcCompat="@drawable/back" />
+
         <TextView
             android:id="@+id/invTitle"
             android:layout_width="wrap_content"
@@ -86,7 +97,7 @@
             android:gravity="center"
             android:padding="10sp"
             android:text="Inventory"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="24sp"
             app:fontFamily="@font/balladehf" />
 
