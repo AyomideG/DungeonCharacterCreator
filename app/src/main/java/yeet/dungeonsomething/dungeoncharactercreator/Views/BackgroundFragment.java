@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import yeet.dungeonsomething.dungeoncharactercreator.CharacterManager;
+import yeet.dungeonsomething.dungeoncharactercreator.Model.Character;
 import yeet.dungeonsomething.dungeoncharactercreator.R;
 
 /**
@@ -39,5 +41,10 @@ public class BackgroundFragment extends Fragment {
 
     }
 
+    @Override
+    public void onDetach() {
+        CharacterManager.getInstance(null).getCharacter().getPlayerInfo().setBackGround(screen.getText().toString());
+        super.onDetach();
+    }
 }
 

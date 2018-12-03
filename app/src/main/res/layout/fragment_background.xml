@@ -32,26 +32,20 @@
             android:text="Please fill out character background information below"
             android:layout_marginBottom="15dp"
             android:textColor="@color/colorSecondaryDark"
-            app:fontFamily="@font/livingst"/>
+            app:fontFamily="@font/balladehf"/>
 
-        <LinearLayout
+
+
+        <EditText
+            android:id="@+id/backgroundText"
             android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:background="@color/colorAccent">
-
-            <EditText
-                android:id="@+id/backgroundText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:text="Enter Background Story"
-                android:scrollbars="horizontal"
-                android:cursorVisible="true"
-                android:textCursorDrawable="@color/black"
-                android:textColor="@color/colorSecondaryDark"
-                app:fontFamily="@font/balladehf" />
-
-        </LinearLayout>
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:scrollbars="horizontal"
+            android:cursorVisible="true"
+            android:textCursorDrawable="@color/black"
+            android:textColor="@color/colorSecondaryDark"
+            app:fontFamily="@font/balladehf" />
 
     </LinearLayout>
 
