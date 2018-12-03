@@ -44,6 +44,7 @@
 
         <TextView
             android:layout_width="match_parent"
+            android:gravity="top"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:paddingTop="10dp"
@@ -54,19 +55,11 @@
 
         <EditText
             android:id="@+id/description"
+            android:gravity="top"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="150dp"
             android:background="@color/colorAccent"
             android:scrollbars="horizontal" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Save"
-            android:textColor="@color/colorSecondaryDark"
-            android:textSize="25dp"
-            app:fontFamily="@font/balladehf" />
 
     </LinearLayout>
 

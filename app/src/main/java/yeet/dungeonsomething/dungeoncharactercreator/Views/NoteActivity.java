@@ -40,24 +40,15 @@ public class NoteActivity extends AppCompatActivity {
         titles = new ArrayList<>();
         details = new ArrayList<>();
         notes = getNotes();
-        if(notes.size() > 0) {
-            for (Note n : notes) {
-                String title = n.getTitle();
-                String content = n.getContent();
-                titles.add(title);
-                details.add(content);
-            }
-        }
+        parseNotes();
         final Intent intent = new Intent(this, NoteFragment.class);
         Button button = findViewById(R.id.button);
         intent.putExtra("NOTES", notes);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final ViewPager viewPager = (ViewPager) findViewById(R.id.note_pager);
-                final NotePageAdapter npa = new NotePageAdapter(getSupportFragmentManager());
-                viewPager.setAdapter(npa);
-                viewPager.setCurrentItem(0);
+                NoteFragment nf = new NoteFragment();
+                nf.show(getFragmentManager(), "Note");
             }
         });
         listView = findViewById(R.id.explistNotes);
@@ -174,4 +165,30 @@ public class NoteActivity extends AppCompatActivity {
             return true;
         }
     }
+
+    public void parseNotes(){
+        if(notes.size() > 0) {
+            for (Note n : notes) {
+                String title = n.getTitle();
+                String content = n.getContent();
+                titles.add(title);
+                details.add(content);
+            }
+        }
+    }
+
+    public ArrayList<String> getDetails() {
+        return details;
+    }
+
+    public ArrayList<String> getTitles() {
+        return titles;
+    }
+
+    public void addToList(String title, String detail){
+        details.add(detail);
+        titles.add(title);
+        listView.setAdapter(adapter);
+    }
+
 }
