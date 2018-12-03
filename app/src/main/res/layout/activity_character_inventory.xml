@@ -173,6 +173,7 @@
                 android:background="@color/colorPrimaryDark"
                 android:gravity="center_horizontal"
                 android:text="+"
+                android:onClick="newItem"
                 android:textColor="@color/colorPrimaryLight"
                 android:textSize="24sp"
                 app:fontFamily="@font/balladehf" />
