@@ -77,27 +77,18 @@ public class CharacterInventoryActivity extends AppCompatActivity {
         ArrayList<Item> items = myCharacter.getInventory();
 
         if (items != null) {
-//            TextView[] tv = new TextView[items.size()];
-//            TextView temp;
             LinearLayout invlist = findViewById(R.id.invlist);
 
             invlist.removeAllViews();
 
             for (int i = 0; i < items.size(); i++) {
- //               temp = new TextView(this);
- //               temp.setGravity(Gravity.LEFT);
- //               temp.setText(items.get(i).getName() + "         " + items.get(i).getCost());
                 View view = getLayoutInflater().inflate(R.layout.inventory_item,null);
-//                ( (TextView) view.findViewById(R.id.item_name)).setText(items.get(0).getName());
-//                ( (TextView) view.findViewById(R.id.item_cost)).setText(items.get(0).getCost().getQuantity());
                 TextView nametext = view.findViewById(R.id.item_name);
                 nametext.setText(items.get(i).getName());
                 TextView costtext = view.findViewById(R.id.item_cost);
                 costtext.setText(String.valueOf(items.get(i).getCost().getQuantity()));
                 costtext.setGravity(Gravity.RIGHT);
                 invlist.addView(view);
-//                View view = getLayoutInflater().inflate(R.layout.attack_item,null);
-//                invlist.addView(view);
             }
 
         }
