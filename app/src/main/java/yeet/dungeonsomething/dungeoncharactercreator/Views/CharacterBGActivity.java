@@ -52,11 +52,22 @@ public class CharacterBGActivity extends AppCompatActivity {
             ifNull = true;
         }
 
+        findViewById(R.id.titlerow).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showHome(v);
+            }
+        });
+
     }
 
     @Override
     public void onStart() {
         super.onStart();
+        updateView();
+    }
+
+    public void updateView() {
         ((TextView) findViewById(R.id.character_bg_name)).setText(myCharacter.getName());
         ((TextView) findViewById(R.id.character_bg_race)).setText(myCharacter.getRace().getName());
         ((TextView) findViewById(R.id.character_bg_class)).setText(myCharacter.getMyclass().getName());
@@ -141,14 +152,22 @@ public class CharacterBGActivity extends AppCompatActivity {
     }
     public void showBackground(View view) {
         Intent intent = new Intent(this, CharacterBGActivity.class);
+        intent.putExtra("CHARACTER_NAME", myCharacter.getName());
         startActivity(intent);
     }
     public void showNotes(View view) {
         Intent intent = new Intent(this, NoteActivity.class);
+        intent.putExtra("CHARACTER_NAME", myCharacter.getName());
         startActivity(intent);
     }
     public void showInventory(View view) {
         Intent intent = new Intent(this, CharacterInventoryActivity.class);
+        intent.putExtra("CHARACTER_NAME", myCharacter.getName());
+        startActivity(intent);
+    }
+    public void showHome(View view) {
+        Intent intent = new Intent(this, CharacterHomeActivity.class);
+        intent.putExtra("CHARACTER_NAME", myCharacter.getName());
         startActivity(intent);
     }
 

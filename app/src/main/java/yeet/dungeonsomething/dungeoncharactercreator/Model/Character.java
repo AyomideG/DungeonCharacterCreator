@@ -14,10 +14,13 @@ public class Character implements Serializable {
     private int speed;
     private int armorClass;
     private ArrayList<Proficiency> proficiencies;
+    private ArrayList<Skill> skillsProficentIn;
     private ArrayList<Note> notes;
     private ArrayList<Item> inventory;
     private ArrayList<Spell> knownspells;
+    private ArrayList<Attack> attacks;
     private PlayerInfo playerInfo;
+    private Damage hitDice;
 
     public Character(){
         name = "No one";
@@ -30,11 +33,19 @@ public class Character implements Serializable {
         speed = 0;
         armorClass = 0;
         proficiencies = new ArrayList<>();
+        skillsProficentIn = new ArrayList<>();
         notes = new ArrayList<>();
         inventory = new ArrayList<>();
         knownspells = new ArrayList<>();
         playerInfo = new PlayerInfo();
+        attacks = new ArrayList<>();
+        hitDice = new Damage(1,6);
     }
+
+    public int getProficiencyBonus(){
+        return (7+level)/4;
+    }
+
 
     public String getName() {
         return name;
@@ -144,4 +155,28 @@ public class Character implements Serializable {
     public PlayerInfo getPlayerInfo() { return playerInfo; }
 
     public void setPlayerInfo(PlayerInfo playerInfo) { this.playerInfo = playerInfo; }
+
+    public ArrayList<Skill> getSkillsProficentIn() {
+        return skillsProficentIn;
+    }
+
+    public void setSkillsProficentIn(ArrayList<Skill> skillsProficentIn) {
+        this.skillsProficentIn = skillsProficentIn;
+    }
+
+    public Damage getHitDice() {
+        return hitDice;
+    }
+
+    public void setHitDice(Damage hitDice) {
+        this.hitDice = hitDice;
+    }
+
+    public ArrayList<Attack> getAttacks() {
+        return attacks;
+    }
+
+    public void setAttacks(ArrayList<Attack> attacks) {
+        this.attacks = attacks;
+    }
 }

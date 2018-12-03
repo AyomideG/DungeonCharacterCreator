@@ -9,9 +9,14 @@ import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 import yeet.dungeonsomething.dungeoncharactercreator.CharacterManager;
+import yeet.dungeonsomething.dungeoncharactercreator.Model.Attack;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Character;
 import yeet.dungeonsomething.dungeoncharactercreator.R;
+import yeet.dungeonsomething.dungeoncharactercreator.Views.Dialogs.HomeData;
+import yeet.dungeonsomething.dungeoncharactercreator.Views.Dialogs.NewAttackItem;
 
 public class PhysicalAttacksFragment extends Fragment {
     public PhysicalAttacksFragment(){
@@ -26,16 +31,28 @@ public class PhysicalAttacksFragment extends Fragment {
 
         //set the data
         Character data = CharacterManager.getInstance(getActivity().getAssets()).getCharacter();
-        ((TextView) view.findViewById(R.id.proficency)).setText(String.valueOf("TBD"));
+        ((TextView) view.findViewById(R.id.proficency)).setText(String.valueOf(CharacterManager.getInstance(null).getCharacter().getProficiencyBonus()));
         ((TextView) view.findViewById(R.id.strengthBonus)).setText(String.valueOf(data.getStats().getModifier(data.getStats().getSTR())));
 
         View atkLayout = (LinearLayout) view.findViewById(R.id.attacks_layout);
-        View attack = inflater.inflate(R.layout.attack_item, container, false);
-//        ((CheckBox)profItem.findViewById(R.id.prof_check)).setText(profs[i].getName());
-        ((LinearLayout) atkLayout).addView(attack);
+        ArrayList<Attack> attacks = CharacterManager.getInstance(null).getCharacter().getAttacks();
+        for (int i = 0; i < attacks.size(); i++) {
+            View attack = inflater.inflate(R.layout.attack_item, container, false);
+
+            ((TextView)attack.findViewById(R.id.attack_name)).setText(attacks.get(i).getName());
+//            ((TextView)attack.findViewById(R.id.attack_modifier)).setText(attacks.get(i).get());
+            ((TextView)attack.findViewById(R.id.attack_range)).setText(attacks.get(i).getRange());
+            ((TextView)attack.findViewById(R.id.attack_type)).setText(attacks.get(i).getType());
+            ((TextView)attack.findViewById(R.id.attack_damage)).setText(attacks.get(i).getDamage().getDice_count()+"d"+attacks.get(i).getDamage().getDice_value());
+
+            ((LinearLayout) atkLayout).addView(attack);
+        }
+
 
         return view;
     }
+
+
 
 
 }

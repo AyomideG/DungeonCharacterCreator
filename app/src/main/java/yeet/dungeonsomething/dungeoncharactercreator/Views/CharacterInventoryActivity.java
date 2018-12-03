@@ -20,6 +20,8 @@ import yeet.dungeonsomething.dungeoncharactercreator.Model.Character;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Item;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.PlayerInfo;
 import yeet.dungeonsomething.dungeoncharactercreator.R;
+import yeet.dungeonsomething.dungeoncharactercreator.Views.Dialogs.HomeData;
+import yeet.dungeonsomething.dungeoncharactercreator.Views.Dialogs.NewInventoryData;
 
 public class CharacterInventoryActivity extends AppCompatActivity {
 
@@ -51,11 +53,23 @@ public class CharacterInventoryActivity extends AppCompatActivity {
             myCharacter.setInventory(new ArrayList<Item>());
             CharacterManager.getInstance(getAssets()).newCharacter(myCharacter);
         }
+
+        findViewById(R.id.titlerow).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showHome(v);
+            }
+        });
+
     }
 
     @Override
     public void onStart() {
         super.onStart();
+        updateView();
+    }
+
+    public void updateView() {
         ((TextView) findViewById(R.id.character_inv_name)).setText(myCharacter.getName());
         ((TextView) findViewById(R.id.character_inv_race)).setText(myCharacter.getRace().getName());
         ((TextView) findViewById(R.id.character_inv_class)).setText(myCharacter.getMyclass().getName());
@@ -63,18 +77,26 @@ public class CharacterInventoryActivity extends AppCompatActivity {
         ArrayList<Item> items = myCharacter.getInventory();
 
         if (items != null) {
-            TextView[] tv = new TextView[items.size()];
-            TextView temp;
             LinearLayout invlist = findViewById(R.id.invlist);
 
+            invlist.removeAllViews();
+
             for (int i = 0; i < items.size(); i++) {
-                temp = new TextView(this);
-                temp.setGravity(Gravity.LEFT);
-                temp.setText(items.get(i).getName() + "         " + items.get(i).getCost());
-                invlist.addView(temp);
-                tv[i] = temp;
+                View view = getLayoutInflater().inflate(R.layout.inventory_item,null);
+                TextView nametext = view.findViewById(R.id.item_name);
+                nametext.setText(items.get(i).getName());
+                TextView costtext = view.findViewById(R.id.item_cost);
+                costtext.setText(String.valueOf(items.get(i).getCost().getQuantity()));
+                costtext.setGravity(Gravity.RIGHT);
+                invlist.addView(view);
             }
+
         }
+    }
+
+    public void newItem(View view){
+        NewInventoryData nid = new NewInventoryData();
+        nid.show(getFragmentManager(),"New Item");
 
     }
 
@@ -90,14 +112,22 @@ public class CharacterInventoryActivity extends AppCompatActivity {
     }
     public void showBackground(View view) {
         Intent intent = new Intent(this, CharacterBGActivity.class);
+        intent.putExtra("CHARACTER_NAME", myCharacter.getName());
         startActivity(intent);
     }
     public void showNotes(View view) {
         Intent intent = new Intent(this, NoteActivity.class);
+        intent.putExtra("CHARACTER_NAME", myCharacter.getName());
         startActivity(intent);
     }
     public void showInventory(View view) {
         Intent intent = new Intent(this, CharacterInventoryActivity.class);
+        intent.putExtra("CHARACTER_NAME", myCharacter.getName());
+        startActivity(intent);
+    }
+    public void showHome(View view) {
+        Intent intent = new Intent(this, CharacterHomeActivity.class);
+        intent.putExtra("CHARACTER_NAME", myCharacter.getName());
         startActivity(intent);
     }
 

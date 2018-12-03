@@ -40,29 +40,28 @@ public class NoteActivity extends AppCompatActivity {
         titles = new ArrayList<>();
         details = new ArrayList<>();
         notes = getNotes();
-        if(notes.size() > 0) {
-            for (Note n : notes) {
-                String title = n.getTitle();
-                String content = n.getContent();
-                titles.add(title);
-                details.add(content);
-            }
-        }
+        parseNotes();
         final Intent intent = new Intent(this, NoteFragment.class);
         Button button = findViewById(R.id.button);
         intent.putExtra("NOTES", notes);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final ViewPager viewPager = (ViewPager) findViewById(R.id.note_pager);
-                final NotePageAdapter npa = new NotePageAdapter(getSupportFragmentManager());
-                viewPager.setAdapter(npa);
-                viewPager.setCurrentItem(0);
+                NoteFragment nf = new NoteFragment();
+                nf.show(getFragmentManager(), "Note");
             }
         });
         listView = findViewById(R.id.explistNotes);
         adapter = new CustomExpandableListAdapter(getBaseContext(), titles, details);
         listView.setAdapter(adapter);
+
+        findViewById(R.id.backContainer).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showHome(v);
+            }
+        });
+
     }
 
     private ArrayList<Note> getNotes() {
@@ -83,6 +82,10 @@ public class NoteActivity extends AppCompatActivity {
     }
     public void showInventory(View view) {
         Intent intent = new Intent(this, CharacterInventoryActivity.class);
+        startActivity(intent);
+    }
+    public void showHome(View view) {
+        Intent intent = new Intent(this, CharacterHomeActivity.class);
         startActivity(intent);
     }
 
@@ -108,7 +111,7 @@ public class NoteActivity extends AppCompatActivity {
 
         @Override
         public Object getChild(int listPosition, int expandedListPosition) {
-            return this.expandableListDetail.get(expandedListPosition);
+            return this.expandableListDetail.get(listPosition);
         }
 
         @Override
@@ -131,7 +134,7 @@ public class NoteActivity extends AppCompatActivity {
 
         @Override
         public int getChildrenCount(int listPosition) {
-            return this.expandableListDetail.size();
+            return 1;
         }
 
         @Override
@@ -174,4 +177,30 @@ public class NoteActivity extends AppCompatActivity {
             return true;
         }
     }
+
+    public void parseNotes(){
+        if(notes.size() > 0) {
+            for (Note n : notes) {
+                String title = n.getTitle();
+                String content = n.getContent();
+                titles.add(title);
+                details.add(content);
+            }
+        }
+    }
+
+    public ArrayList<String> getDetails() {
+        return details;
+    }
+
+    public ArrayList<String> getTitles() {
+        return titles;
+    }
+
+    public void addToList(String title, String detail){
+        details.add(detail);
+        titles.add(title);
+        listView.setAdapter(adapter);
+    }
+
 }

@@ -13,6 +13,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import yeet.dungeonsomething.dungeoncharactercreator.APIDataManager;
+import yeet.dungeonsomething.dungeoncharactercreator.CharacterManager;
+import yeet.dungeonsomething.dungeoncharactercreator.Model.Character;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Proficiency;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Skill;
 import yeet.dungeonsomething.dungeoncharactercreator.R;
@@ -41,11 +43,26 @@ public class CharStatsFragment extends Fragment {
         for(int i = 0; i < profs.length; i++){
             String one = profs[i].getAbility_score().getIdentifier().toLowerCase();
             String two = getArguments().getString("data").toLowerCase();
-            if(two.contains(one)){
+            if(two.contains(one)){//that skill is in this tab
                 View profFayout = (LinearLayout) view.findViewById(R.id.proficiencies_layout);
                 View profItem = inflater.inflate(R.layout.proficency_item, container, false);
                 ((CheckBox)profItem.findViewById(R.id.prof_check)).setText(profs[i].getName());
+                for (int j = 0; j < profs[i].getDesc().length; j++) {//set description text
+                    ((TextView)profItem.findViewById(R.id.skill_description)).append(profs[i].getDesc()[j]);
+                }
+                //set the proficiency bonus
+                int modValue = getArguments().getInt("mod");
+                //check character stats. TBD This is not efficient, make faster
+                for(Skill s : CharacterManager.getInstance(null).getCharacter().getSkillsProficentIn()){
+                    if(s.getName().compareToIgnoreCase(profs[i].getName()) == 0) {
+                        modValue += 2;
+                        ((CheckBox)profItem.findViewById(R.id.prof_check)).setChecked(true);
+                    }
+                }
+
+                ((TextView)profItem.findViewById(R.id.prof_bomus)).setText(String.valueOf(modValue));
                 ((LinearLayout) profFayout).addView(profItem);
+
             }
         }
         return view;
