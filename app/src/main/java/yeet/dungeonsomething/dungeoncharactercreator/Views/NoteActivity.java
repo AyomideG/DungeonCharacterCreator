@@ -111,7 +111,7 @@ public class NoteActivity extends AppCompatActivity {
 
         @Override
         public Object getChild(int listPosition, int expandedListPosition) {
-            return this.expandableListDetail.get(expandedListPosition);
+            return this.expandableListDetail.get(listPosition);
         }
 
         @Override
@@ -134,7 +134,7 @@ public class NoteActivity extends AppCompatActivity {
 
         @Override
         public int getChildrenCount(int listPosition) {
-            return this.expandableListDetail.size();
+            return 1;
         }
 
         @Override
