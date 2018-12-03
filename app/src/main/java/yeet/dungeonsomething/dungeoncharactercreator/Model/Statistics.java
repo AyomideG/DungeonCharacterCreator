@@ -22,7 +22,7 @@ public class Statistics implements Serializable {
      * @param value
      * @return
      */
-    public int getModifier(int value){
+    public static int getModifier(int value){
         return (value - 10) /2;
     }
 
@@ -43,5 +43,24 @@ public class Statistics implements Serializable {
     }
     public int getCHR(){
         return abilityValues[CHR_INDEX];
+    }
+
+    public void setSTR(int i){
+        abilityValues[STR_INDEX] = i;
+    }
+    public void setDEX(int i){
+         abilityValues[DEX_INDEX] = i;
+    }
+    public void setCON(int i){
+        abilityValues[CON_INDEX] = i;
+    }
+    public void setWIS(int i){
+         abilityValues[WIS_INDEX] = i;
+    }
+    public void setINT(int i){
+         abilityValues[INT_INDEX] = i;
+    }
+    public void setCHR(int i){
+         abilityValues[CHR_INDEX] = i;
     }
 }

@@ -19,6 +19,7 @@ public class Character implements Serializable {
     private ArrayList<Item> inventory;
     private ArrayList<Spell> knownspells;
     private PlayerInfo playerInfo;
+    private Damage hitDice;
 
     public Character(){
         name = "No one";
@@ -36,7 +37,13 @@ public class Character implements Serializable {
         inventory = new ArrayList<>();
         knownspells = new ArrayList<>();
         playerInfo = new PlayerInfo();
+        hitDice = new Damage(1,6);
     }
+
+    public int getProficiencyBonus(){
+        return (7+level)/4;
+    }
+
 
     public String getName() {
         return name;
@@ -153,5 +160,13 @@ public class Character implements Serializable {
 
     public void setSkillsProficentIn(ArrayList<Skill> skillsProficentIn) {
         this.skillsProficentIn = skillsProficentIn;
+    }
+
+    public Damage getHitDice() {
+        return hitDice;
+    }
+
+    public void setHitDice(Damage hitDice) {
+        this.hitDice = hitDice;
     }
 }
