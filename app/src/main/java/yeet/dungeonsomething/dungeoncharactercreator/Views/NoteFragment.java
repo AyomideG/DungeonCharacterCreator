@@ -20,6 +20,7 @@ public class NoteFragment extends DialogFragment {
     View view;
     EditText title;
     EditText description;
+
     public NoteFragment() {
         // Required empty public constructor
     }
@@ -44,7 +45,7 @@ public class NoteFragment extends DialogFragment {
                         Note note = new Note(titStr, descStr);
                         Log.d("Yeet", "titleString: " + titStr + "\n descriptionString: " + descStr);
                         CharacterManager.getInstance(getActivity().getAssets()).getCharacter().getNotes().add(note);
-                        ((NoteActivity)getActivity()).addToList(titStr, descStr);
+                        ((NoteActivity) getActivity()).addToList(titStr, descStr);
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -55,44 +56,4 @@ public class NoteFragment extends DialogFragment {
         // Create the AlertDialog object and return it
         return builder.create();
     }
-
-<<<<<<< HEAD
-=======
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-
-        View view = inflater.inflate(R.layout.fragment_note, container, false);
-        view.bringToFront();
-        //view.
-        titleHolder = view.findViewById(R.id.title);
-        descriptionHolder = view.findViewById(R.id.description);
-        saveButton = view.findViewById(R.id.button2);
-        saveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                save();
-            }
-        });
-        return view;
-    }
-
-    @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view,savedInstanceState);
-
-    }
-
-    public void save(){
-        // Saves the note and goes back
-        String title = titleHolder.getText().toString();
-        String description = descriptionHolder.getText().toString();
-        note = new Note(title, description);
-        intent = new Intent(getActivity(), NoteActivity.class);
-        intent.putExtra("NOTE", note); // add to char notes instead of this
-        startActivity(intent);
-    }
->>>>>>> b7ec7159ea0fd940d8e0991272e61f9d75361347
 }
