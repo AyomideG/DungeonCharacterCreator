@@ -88,7 +88,8 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <LinearLayout
                 android:id="@+id/attacks_layout"
@@ -99,5 +100,14 @@
             </LinearLayout>
         </ScrollView>
 
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_button"
+            android:onClick="showNewAttack"
+            android:text="+" />
+
     </LinearLayout>
+
 </FrameLayout>

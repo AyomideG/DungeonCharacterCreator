@@ -18,6 +18,7 @@ public class Character implements Serializable {
     private ArrayList<Note> notes;
     private ArrayList<Item> inventory;
     private ArrayList<Spell> knownspells;
+    private ArrayList<Attack> attacks;
     private PlayerInfo playerInfo;
     private Damage hitDice;
 
@@ -37,6 +38,7 @@ public class Character implements Serializable {
         inventory = new ArrayList<>();
         knownspells = new ArrayList<>();
         playerInfo = new PlayerInfo();
+        attacks = new ArrayList<>();
         hitDice = new Damage(1,6);
     }
 
@@ -168,5 +170,13 @@ public class Character implements Serializable {
 
     public void setHitDice(Damage hitDice) {
         this.hitDice = hitDice;
+    }
+
+    public ArrayList<Attack> getAttacks() {
+        return attacks;
+    }
+
+    public void setAttacks(ArrayList<Attack> attacks) {
+        this.attacks = attacks;
     }
 }
