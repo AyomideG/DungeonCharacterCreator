@@ -35,7 +35,11 @@ public class BackgroundFragment extends Fragment {
 
         screen = (EditText) v.findViewById(R.id.backgroundText);
 
-        screen.setText("");
+        if(CharacterManager.getInstance(null).getCharacter().getPlayerInfo().getBackGround() == null) {
+            screen.setText("");
+        } else {
+            screen.setText(CharacterManager.getInstance(null).getCharacter().getPlayerInfo().getBackGround());
+        }
 
         return v;
 
