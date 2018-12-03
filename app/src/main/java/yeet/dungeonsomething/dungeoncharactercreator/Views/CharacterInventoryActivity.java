@@ -82,11 +82,13 @@ public class CharacterInventoryActivity extends AppCompatActivity {
             LinearLayout invlist = findViewById(R.id.invlist);
 
             for (int i = 0; i < items.size(); i++) {
-                temp = new TextView(this);
-                temp.setGravity(Gravity.LEFT);
-                temp.setText(items.get(i).getName() + "         " + items.get(i).getCost());
-                invlist.addView(temp);
-                tv[i] = temp;
+//                temp = new TextView(this);
+//                temp.setGravity(Gravity.LEFT);
+//                temp.setText(items.get(i).getName() + "         " + items.get(i).getCost());
+//                invlist.addView(temp);
+//                tv[i] = temp;
+                View view = getLayoutInflater().inflate(R.layout.attack_item,null);
+                invlist.addView(view);
             }
         }
     }

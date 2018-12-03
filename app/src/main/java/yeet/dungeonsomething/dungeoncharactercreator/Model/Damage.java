@@ -4,6 +4,27 @@ import java.io.Serializable;
 import java.util.Random;
 
 public class Damage implements Serializable {
+
+    private int dice_count;
+    private int dice_value;
+    private APIResource damage_type;
+
+    public Damage(){}
+
+    public Damage(int n, int t){
+        dice_value = t;
+        dice_count = n;
+    }
+
+    public int getRoll(){
+        int result = 0;
+        Random r = new Random();
+        for (int i = 0; i < getDice_count(); i++) {
+            result += r.nextInt() % getDice_value();
+        }
+        return result;
+    }
+
     public int getDice_count() {
         return dice_count;
     }
@@ -20,16 +41,11 @@ public class Damage implements Serializable {
         this.dice_value = dice_value;
     }
 
-    int dice_count;
-    int dice_value;
-    APIResource damage_type;
+    public APIResource getDamage_type() {
+        return damage_type;
+    }
 
-    public int getRoll(){
-        int result = 0;
-        Random r = new Random();
-        for (int i = 0; i < dice_count; i++) {
-            result += r.nextInt() % dice_value;
-        }
-        return result;
+    public void setDamage_type(APIResource damage_type) {
+        this.damage_type = damage_type;
     }
 }

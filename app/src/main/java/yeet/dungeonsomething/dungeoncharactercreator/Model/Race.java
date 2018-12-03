@@ -18,6 +18,15 @@ public class Race implements Serializable {
     private String url;
 
 
+    public String getFullDescription(){
+        String ret = new String();
+        ret+= getAlignment()+"\n";
+        ret+= getSize_description()+"\n";
+        ret+= getLanguage_desc()+"\n";
+        return ret;
+    }
+
+
     public String getName() {
         return name;
     }

@@ -22,7 +22,7 @@ public class Statistics implements Serializable {
      * @param value
      * @return
      */
-    public int getModifier(int value){
+    public static int getModifier(int value){
         return (value - 10) /2;
     }
 

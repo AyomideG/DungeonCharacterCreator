@@ -26,7 +26,7 @@ public class PhysicalAttacksFragment extends Fragment {
 
         //set the data
         Character data = CharacterManager.getInstance(getActivity().getAssets()).getCharacter();
-        ((TextView) view.findViewById(R.id.proficency)).setText(String.valueOf("TBD"));
+        ((TextView) view.findViewById(R.id.proficency)).setText(String.valueOf(CharacterManager.getInstance(null).getCharacter().getProficiencyBonus()));
         ((TextView) view.findViewById(R.id.strengthBonus)).setText(String.valueOf(data.getStats().getModifier(data.getStats().getSTR())));
 
         View atkLayout = (LinearLayout) view.findViewById(R.id.attacks_layout);
