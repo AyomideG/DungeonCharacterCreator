@@ -17,6 +17,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import yeet.dungeonsomething.dungeoncharactercreator.APIDataManager;
+import yeet.dungeonsomething.dungeoncharactercreator.CharacterManager;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Race;
 import yeet.dungeonsomething.dungeoncharactercreator.R;
 
@@ -62,30 +63,39 @@ public class RaceFragment extends Fragment {
                 if (name.equals("Dwarf")) {
                     raceImages.setImageResource(R.drawable.dwarf);
                     raceDescription.setText(getDescription().get(0));
+                    CharacterManager.getInstance(null).getCharacter().setRace(APIDataManager.getInstance(null).getRaces()[0]);
                 }else if (name.equals("Elf")){
                     raceImages.setImageResource(R.drawable.elf);
                     raceDescription.setText(getDescription().get(1));
+                    CharacterManager.getInstance(null).getCharacter().setRace(APIDataManager.getInstance(null).getRaces()[1]);
                 }else if (name.equals("Halfling")){
                     raceImages.setImageResource(R.drawable.halfling);
                     raceDescription.setText(getDescription().get(2));
+                    CharacterManager.getInstance(null).getCharacter().setRace(APIDataManager.getInstance(null).getRaces()[2]);
                 }else if (name.equals("Human")){
                     raceImages.setImageResource(R.drawable.human);
                     raceDescription.setText(getDescription().get(3));
+                    CharacterManager.getInstance(null).getCharacter().setRace(APIDataManager.getInstance(null).getRaces()[3]);
                 }else if (name.equals("Dragonborn")){
                     raceImages.setImageResource(R.drawable.dragonborn);
                     raceDescription.setText(getDescription().get(4));
+                    CharacterManager.getInstance(null).getCharacter().setRace(APIDataManager.getInstance(null).getRaces()[4]);
                 }else if (name.equals("Gnome")){
                     raceImages.setImageResource(R.drawable.gnome);
                     raceDescription.setText(getDescription().get(5));
+                    CharacterManager.getInstance(null).getCharacter().setRace(APIDataManager.getInstance(null).getRaces()[5]);
                 }else if (name.equals("Half-Elf")){
                     raceImages.setImageResource(R.drawable.halfelf);
                     raceDescription.setText(getDescription().get(6));
+                    CharacterManager.getInstance(null).getCharacter().setRace(APIDataManager.getInstance(null).getRaces()[6]);
                 }else if (name.equals("Half-Orc")){
                     raceImages.setImageResource(R.drawable.halforc);
                     raceDescription.setText(getDescription().get(7));
+                    CharacterManager.getInstance(null).getCharacter().setRace(APIDataManager.getInstance(null).getRaces()[7]);
                 }else if (name.equals("Tiefling")){
                     raceImages.setImageResource(R.drawable.tiefling);
                     raceDescription.setText(getDescription().get(8));
+                    CharacterManager.getInstance(null).getCharacter().setRace(APIDataManager.getInstance(null).getRaces()[8]);
                 }
             }
 
