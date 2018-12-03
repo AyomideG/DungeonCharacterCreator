@@ -20,6 +20,8 @@ import yeet.dungeonsomething.dungeoncharactercreator.Model.Character;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Item;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.PlayerInfo;
 import yeet.dungeonsomething.dungeoncharactercreator.R;
+import yeet.dungeonsomething.dungeoncharactercreator.Views.Dialogs.HomeData;
+import yeet.dungeonsomething.dungeoncharactercreator.Views.Dialogs.NewInventoryData;
 
 public class CharacterInventoryActivity extends AppCompatActivity {
 
@@ -64,6 +66,10 @@ public class CharacterInventoryActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
+        updateView();
+    }
+
+    public void updateView() {
         ((TextView) findViewById(R.id.character_inv_name)).setText(myCharacter.getName());
         ((TextView) findViewById(R.id.character_inv_race)).setText(myCharacter.getRace().getName());
         ((TextView) findViewById(R.id.character_inv_class)).setText(myCharacter.getMyclass().getName());
@@ -83,6 +89,11 @@ public class CharacterInventoryActivity extends AppCompatActivity {
                 tv[i] = temp;
             }
         }
+    }
+
+    public void newItem(View view){
+        NewInventoryData nid = new NewInventoryData();
+        nid.show(getFragmentManager(),"Edit");
 
     }
 
@@ -98,18 +109,22 @@ public class CharacterInventoryActivity extends AppCompatActivity {
     }
     public void showBackground(View view) {
         Intent intent = new Intent(this, CharacterBGActivity.class);
+        intent.putExtra("CHARACTER_NAME", myCharacter.getName());
         startActivity(intent);
     }
     public void showNotes(View view) {
         Intent intent = new Intent(this, NoteActivity.class);
+        intent.putExtra("CHARACTER_NAME", myCharacter.getName());
         startActivity(intent);
     }
     public void showInventory(View view) {
         Intent intent = new Intent(this, CharacterInventoryActivity.class);
+        intent.putExtra("CHARACTER_NAME", myCharacter.getName());
         startActivity(intent);
     }
     public void showHome(View view) {
         Intent intent = new Intent(this, CharacterHomeActivity.class);
+        intent.putExtra("CHARACTER_NAME", myCharacter.getName());
         startActivity(intent);
     }
 
