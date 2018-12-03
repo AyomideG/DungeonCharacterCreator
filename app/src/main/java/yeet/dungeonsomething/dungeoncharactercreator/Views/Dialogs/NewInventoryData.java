@@ -40,7 +40,7 @@ public class NewInventoryData extends DialogFragment {
         //set the data in the dialog
         dialogContent = inflater.inflate(R.layout.dialog_character_inventory_add, null);
 
-        builder.setMessage("Edit")
+        builder.setMessage("New Item")
                 .setView(dialogContent)
                 .setPositiveButton("Apply", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
