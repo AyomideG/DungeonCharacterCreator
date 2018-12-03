@@ -18,38 +18,86 @@
             android:orientation="vertical"
             android:padding="5dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/levelView"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Level"
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textSize="25dp"
+                    app:fontFamily="@font/balladehf" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Please select a starting level for your character"
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textSize="15dp"
+                    app:fontFamily="@font/balladehf" />
+
+                <Spinner
+                    android:id="@+id/levelSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="15dp"
+                    android:focusableInTouchMode="false"
+                    android:text="Select Level"
+                    android:textColor="@color/colorSecondaryDark"
+                    app:fontFamily="@font/balladehf" />
+
+            </LinearLayout>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Please enter a value for your character's ability and select from the list of Proficiencies."
                 android:textColor="@color/colorSecondaryDark"
                 android:textSize="15dp"
-                app:fontFamily="@font/livingst" />
+                app:fontFamily="@font/balladehf" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginBottom="10dp">
+                android:layout_height="100dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/strView"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="Strength"
                     android:textColor="@color/colorSecondaryDark"
                     android:textSize="25dp"
-                    app:fontFamily="@font/livingst" />
+                    app:fontFamily="@font/balladehf" />
 
                 <EditText
-                    android:id="@+id/strText"
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="15dp"
+                    android:id="@+id/strEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="15"
                     android:textColor="@color/colorSecondaryDark"
-                    app:fontFamily="@font/balladehf"
-                    android:cursorVisible="true"
-                    android:textCursorDrawable="@color/black"/>
+                    android:textSize="25dp"
+                    app:fontFamily="@font/balladehf" />
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary" />
+
 
             </LinearLayout>
 
@@ -69,28 +117,41 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="100dp"
+                android:orientation="vertical"
                 android:layout_marginBottom="10dp">
 
                 <TextView
                     android:id="@+id/dexView"
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="Dexterity"
-                    android:textSize="25dp"
                     android:textColor="@color/colorSecondaryDark"
-                    app:fontFamily="@font/livingst" />
+                    android:textSize="25dp"
+                    app:fontFamily="@font/balladehf" />
 
                 <EditText
                     android:id="@+id/dexText"
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="15dp"
-                    android:textColor="@color/colorSecondaryDark"
-                    app:fontFamily="@font/balladehf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:cursorVisible="true"
-                    android:textCursorDrawable="@color/black"/>
+                    android:gravity="center"
+                    android:text="15"
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textCursorDrawable="@color/black"
+                    android:textSize="25dp"
+                    app:fontFamily="@font/balladehf" />
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary" />
 
             </LinearLayout>
 
@@ -124,28 +185,41 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="100dp"
+                android:orientation="vertical"
                 android:layout_marginBottom="10dp">
 
                 <TextView
                     android:id="@+id/conView"
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="Constitution"
-                    android:textSize="25dp"
                     android:textColor="@color/colorSecondaryDark"
-                    app:fontFamily="@font/livingst" />
+                    android:textSize="25dp"
+                    app:fontFamily="@font/balladehf" />
 
                 <EditText
                     android:id="@+id/conText"
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="15dp"
-                    android:textColor="@color/colorSecondaryDark"
-                    app:fontFamily="@font/balladehf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="15"
+                    android:textSize="25dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
                     android:cursorVisible="true"
-                    android:textCursorDrawable="@color/black"/>
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textCursorDrawable="@color/black"
+                    app:fontFamily="@font/balladehf" />
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary" />
 
             </LinearLayout>
 
@@ -158,28 +232,40 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="100dp"
+                android:orientation="vertical"
                 android:layout_marginBottom="10dp">
 
                 <TextView
                     android:id="@+id/intView"
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="Intelligence"
-                    android:textSize="25dp"
                     android:textColor="@color/colorSecondaryDark"
-                    app:fontFamily="@font/livingst" />
+                    android:textSize="25dp"
+                    app:fontFamily="@font/balladehf" />
 
                 <EditText
                     android:id="@+id/intText"
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="15dp"
-                    android:textColor="@color/colorSecondaryDark"
-                    app:fontFamily="@font/balladehf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="15"
+                    android:textSize="25dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
                     android:cursorVisible="true"
-                    android:textCursorDrawable="@color/black"/>
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textCursorDrawable="@color/black"
+                    app:fontFamily="@font/balladehf" />
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary" />
 
             </LinearLayout>
 
@@ -227,28 +313,41 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="100dp"
+                android:orientation="vertical"
                 android:layout_marginBottom="10dp">
 
                 <TextView
                     android:id="@+id/wisView"
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="Wisdom"
-                    android:textSize="25dp"
                     android:textColor="@color/colorSecondaryDark"
-                    app:fontFamily="@font/livingst" />
+                    android:textSize="25dp"
+                    app:fontFamily="@font/balladehf" />
 
                 <EditText
                     android:id="@+id/wisText"
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="15dp"
-                    android:textColor="@color/colorSecondaryDark"
-                    app:fontFamily="@font/balladehf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="15"
+                    android:textSize="25dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
                     android:cursorVisible="true"
-                    android:textCursorDrawable="@color/black"/>
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textCursorDrawable="@color/black"
+                    app:fontFamily="@font/balladehf" />
+
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary" />
 
             </LinearLayout>
 
@@ -296,28 +395,41 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="100dp"
+                android:orientation="vertical"
                 android:layout_marginBottom="10dp">
 
                 <TextView
                     android:id="@+id/chaView"
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="Charisma"
-                    android:textSize="25dp"
                     android:textColor="@color/colorSecondaryDark"
-                    app:fontFamily="@font/livingst" />
+                    android:textSize="25dp"
+                    app:fontFamily="@font/balladehf" />
 
                 <EditText
                     android:id="@+id/chaText"
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="15dp"
-                    android:textColor="@color/colorSecondaryDark"
-                    app:fontFamily="@font/balladehf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="15"
+                    android:textSize="25dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
                     android:cursorVisible="true"
-                    android:textCursorDrawable="@color/black"/>
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textCursorDrawable="@color/black"
+                    app:fontFamily="@font/balladehf" />
+
+                <View
+                    android:id="@+id/divider5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary" />
 
             </LinearLayout>
 
