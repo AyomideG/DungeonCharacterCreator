@@ -88,6 +88,7 @@ public class CharacterInventoryActivity extends AppCompatActivity {
                 invlist.addView(temp);
                 tv[i] = temp;
             }
+
         }
     }
 
