@@ -13,8 +13,7 @@
         android:textAlignment="gravity"
         android:textColor="@color/colorSecondaryDark"
         android:textSize="15dp"
-        android:textStyle="italic"
-        app:fontFamily="serif" />
+        app:fontFamily="@font/balladehf"/>
 
     <CheckBox
         android:id="@+id/checkbox"

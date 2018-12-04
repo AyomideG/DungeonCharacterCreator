@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -18,10 +18,10 @@
             android:id="@+id/raceView"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:textSize="25dp"
-            android:text="Race"
             android:layout_marginBottom="5dp"
+            android:text="Race"
             android:textColor="@color/colorSecondaryDark"
+            android:textSize="25dp"
             app:fontFamily="@font/balladehf" />
 
         <TextView
@@ -30,14 +30,14 @@
             android:text="Please select a race from the list bellow"
             android:textColor="@color/colorSecondaryDark"
             android:textSize="15dp"
-            app:fontFamily="@font/livingst" />
+            app:fontFamily="@font/balladehf" />
 
         <Spinner
             android:id="@+id/raceSpinner"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:focusableInTouchMode="false"
             android:layout_marginBottom="15dp"
+            android:focusableInTouchMode="false"
             android:text="Select Race"
             android:textColor="@color/colorSecondaryDark"
             app:fontFamily="@font/balladehf" />
@@ -46,16 +46,21 @@
             android:id="@+id/raceImage"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:layout_marginBottom="5dp"/>
+            android:layout_marginBottom="5dp" />
 
-        <TextView
-            android:id="@+id/raceDescription"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:scrollbars="horizontal"
-            android:textColor="@color/colorSecondaryDark"
-            android:textSize="15dp"
-            app:fontFamily="@font/livingst" />
+            android:layout_height="200dp">
+
+            <TextView
+                android:id="@+id/raceDescription"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:textColor="@color/colorSecondaryDark"
+                android:textSize="15dp"
+                app:fontFamily="@font/balladehf" />
+
+        </ScrollView>
 
     </LinearLayout>
 
