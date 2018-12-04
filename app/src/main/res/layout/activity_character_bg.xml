@@ -161,7 +161,7 @@
                             android:layout_height="wrap_content"
                             android:foregroundGravity="left"
                             android:gravity="left"
-                            android:text="One small step for man, one big yeet for mankind"
+                            android:text=""
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             app:fontFamily="@font/balladehf" />
@@ -207,7 +207,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="left"
-                            android:text="neutral good"
+                            android:text=""
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             app:fontFamily="@font/balladehf" />
@@ -298,7 +298,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="left"
-                            android:text="have those"
+                            android:text=""
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             app:fontFamily="@font/balladehf" />
@@ -343,7 +343,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="left"
-                            android:text="jeff"
+                            android:text=""
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             app:fontFamily="@font/balladehf" />
@@ -388,7 +388,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="left"
-                            android:text="allergic to nuts"
+                            android:text=""
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             app:fontFamily="@font/balladehf" />
@@ -433,7 +433,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="left"
-                            android:text="a functioning dnd character sheet app that has more than a week of development time"
+                            android:text=""
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             app:fontFamily="@font/balladehf" />
@@ -478,7 +478,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="left"
-                            android:text="Common"
+                            android:text=""
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             app:fontFamily="@font/balladehf" />
