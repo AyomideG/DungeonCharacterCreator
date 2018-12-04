@@ -18,6 +18,7 @@ import java.util.ArrayList;
 
 import yeet.dungeonsomething.dungeoncharactercreator.APIDataManager;
 import yeet.dungeonsomething.dungeoncharactercreator.CharacterManager;
+import yeet.dungeonsomething.dungeoncharactercreator.Model.Character;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Race;
 import yeet.dungeonsomething.dungeoncharactercreator.R;
 
@@ -28,6 +29,7 @@ public class RaceFragment extends Fragment {
     ArrayList<String> list = new ArrayList<>();
     ImageView raceImages;
     TextView raceDescription;
+    Character data;
 
 
     public RaceFragment() {
@@ -39,10 +41,16 @@ public class RaceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+
         list = getRace();
 
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_race, container, false);
+
+        data = CharacterManager.getInstance(getActivity().getAssets()).getCharacter();
+        if (data == null) {
+            data = new Character();
+        }
 
         Spinner spinner = (Spinner) v.findViewById(R.id.raceSpinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, list);

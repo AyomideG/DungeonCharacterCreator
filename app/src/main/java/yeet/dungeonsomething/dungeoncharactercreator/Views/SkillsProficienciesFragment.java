@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 import yeet.dungeonsomething.dungeoncharactercreator.CharacterManager;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Character;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Proficiency;
+import yeet.dungeonsomething.dungeoncharactercreator.Model.Skill;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Statistics;
 import yeet.dungeonsomething.dungeoncharactercreator.R;
 
@@ -71,17 +73,12 @@ public class SkillsProficienciesFragment extends Fragment {
         str_save.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Strength Saving Throws");
-                p.setType("Strength");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Strength Saving Throw");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -89,17 +86,12 @@ public class SkillsProficienciesFragment extends Fragment {
         ath.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Athletics");
-                p.setType("Strength");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Athletics");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -118,7 +110,8 @@ public class SkillsProficienciesFragment extends Fragment {
                     data.setStats(new Statistics());
                 }
                 if (!s.toString().isEmpty()) {
-                data.getStats().setDEX(Integer.parseInt(s.toString()));}
+                    data.getStats().setDEX(Integer.parseInt(s.toString()));
+                }
             }
         });
 
@@ -126,17 +119,12 @@ public class SkillsProficienciesFragment extends Fragment {
         dex_save.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Dexterity Saving Throws");
-                p.setType("Dexterity");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Dexterity Saving Throw");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -144,17 +132,12 @@ public class SkillsProficienciesFragment extends Fragment {
         acro.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Acrobatics");
-                p.setType("Dexterity");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Acrobatics");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -162,17 +145,12 @@ public class SkillsProficienciesFragment extends Fragment {
         sleight.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Sleight of Hand");
-                p.setType("Dexterity");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Sleight of Hand");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -180,17 +158,12 @@ public class SkillsProficienciesFragment extends Fragment {
         stealth.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Stealth");
-                p.setType("Dexterity");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Stealth");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -209,7 +182,8 @@ public class SkillsProficienciesFragment extends Fragment {
                     data.setStats(new Statistics());
                 }
                 if (!s.toString().isEmpty()) {
-                data.getStats().setCON(Integer.parseInt(s.toString()));}
+                    data.getStats().setCON(Integer.parseInt(s.toString()));
+                }
             }
         });
 
@@ -217,17 +191,12 @@ public class SkillsProficienciesFragment extends Fragment {
         const_save.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Constitution Saving Throws");
-                p.setType("Constitution");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Constitution Saving Throw");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -244,8 +213,10 @@ public class SkillsProficienciesFragment extends Fragment {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (data.getStats() == null) {
                     data.setStats(new Statistics());
-                } if (!s.toString().isEmpty()) {
-                data.getStats().setINT(Integer.parseInt(s.toString()));}
+                }
+                if (!s.toString().isEmpty()) {
+                    data.getStats().setINT(Integer.parseInt(s.toString()));
+                }
             }
         });
 
@@ -253,17 +224,12 @@ public class SkillsProficienciesFragment extends Fragment {
         int_save.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Intelligence Saving Throws");
-                p.setType("Intelligence");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Intelligence Saving Throw");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -271,17 +237,12 @@ public class SkillsProficienciesFragment extends Fragment {
         arcana.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Arcana");
-                p.setType("Intelligence");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Arcana");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -289,17 +250,12 @@ public class SkillsProficienciesFragment extends Fragment {
         hist_c.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("History");
-                p.setType("Intelligence");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("History");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -307,17 +263,12 @@ public class SkillsProficienciesFragment extends Fragment {
         invest.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Investigation");
-                p.setType("Intelligence");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Investigation");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -325,17 +276,12 @@ public class SkillsProficienciesFragment extends Fragment {
         nature.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Nature");
-                p.setType("Intelligence");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Nature");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -343,17 +289,12 @@ public class SkillsProficienciesFragment extends Fragment {
         religion.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Religion");
-                p.setType("Intelligence");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Religion");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -370,8 +311,10 @@ public class SkillsProficienciesFragment extends Fragment {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (data.getStats() == null) {
                     data.setStats(new Statistics());
-                } if (!s.toString().isEmpty()) {
-                data.getStats().setWIS(Integer.parseInt(s.toString())); }
+                }
+                if (!s.toString().isEmpty()) {
+                    data.getStats().setWIS(Integer.parseInt(s.toString()));
+                }
             }
         });
 
@@ -379,17 +322,12 @@ public class SkillsProficienciesFragment extends Fragment {
         wisCheck.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Wisdom Saving Throws");
-                p.setType("Wisdom");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Wisdom Saving Throw");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -397,17 +335,12 @@ public class SkillsProficienciesFragment extends Fragment {
         animal.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Animal Handling");
-                p.setType("Wisdom");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Animal Handling");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -415,17 +348,12 @@ public class SkillsProficienciesFragment extends Fragment {
         insight.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Insight");
-                p.setType("Wisdom");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Insight");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -433,17 +361,12 @@ public class SkillsProficienciesFragment extends Fragment {
         medicine.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Medicine");
-                p.setType("Wisdom");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Medicine");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -451,17 +374,12 @@ public class SkillsProficienciesFragment extends Fragment {
         percep.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Perception");
-                p.setType("Wisdom");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Perception");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -469,17 +387,12 @@ public class SkillsProficienciesFragment extends Fragment {
         survival.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Survival");
-                p.setType("Wisdom");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Survival");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -496,8 +409,10 @@ public class SkillsProficienciesFragment extends Fragment {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (data.getStats() == null) {
                     data.setStats(new Statistics());
-                } if (!s.toString().isEmpty()) {
-                data.getStats().setCHR(Integer.parseInt(s.toString())); }
+                }
+                if (!s.toString().isEmpty()) {
+                    data.getStats().setCHR(Integer.parseInt(s.toString()));
+                }
             }
         });
 
@@ -505,17 +420,12 @@ public class SkillsProficienciesFragment extends Fragment {
         chaCheck.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Charisma Saving Throws");
-                p.setType("Charisma");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Charisma Saving Throw");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -523,17 +433,12 @@ public class SkillsProficienciesFragment extends Fragment {
         deception.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Deception");
-                p.setType("Charisma");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Deception");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -541,17 +446,12 @@ public class SkillsProficienciesFragment extends Fragment {
         intim.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Inimidation");
-                p.setType("Charisma");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Intimidation");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -559,17 +459,12 @@ public class SkillsProficienciesFragment extends Fragment {
         perform.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Performance");
-                p.setType("Charisma");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Performance");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
@@ -577,17 +472,12 @@ public class SkillsProficienciesFragment extends Fragment {
         persuasion.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Proficiency p = new Proficiency();
-                p.setName("Persuasion");
-                p.setType("Charisma");
-                if (data.getProficiencies() == null) {
-                    data.setProficiencies(new ArrayList<Proficiency>());
+                Skill s = new Skill();
+                s.setName("Charisma");
+                if (data.getSkillsProficentIn() == null) {
+                    data.setSkillsProficentIn(new ArrayList<Skill>());
                 }
-                if (b) {
-                    data.getProficiencies().add(p);
-                } else {
-                    data.getProficiencies().remove(p);
-                }
+                data.getSkillsProficentIn().add(s);
             }
         });
 
