@@ -87,6 +87,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:inputType="number"
                     android:text="15"
                     android:textColor="@color/colorSecondaryDark"
                     android:textSize="25dp"
@@ -103,6 +104,7 @@
 
             <CheckBox
                 android:layout_width="match_parent"
+                android:id="@+id/str_save_throws_check"
                 android:layout_height="wrap_content"
                 android:text="Saving Throws"
                 android:textColor="@color/colorSecondaryDark"
@@ -111,6 +113,7 @@
             <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/athletics_check"
                 android:text="Athletics"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
@@ -140,6 +143,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:cursorVisible="true"
+                    android:inputType="number"
                     android:gravity="center"
                     android:text="15"
                     android:textColor="@color/colorSecondaryDark"
@@ -158,6 +162,7 @@
             <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/dex_save_throws_check"
                 android:text="Saving Throws"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
@@ -166,6 +171,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Acrobatics"
+                android:id="@+id/acrobatics_check"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
 
@@ -173,6 +179,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Sleight of Hand"
+                android:id="@+id/sleight_hand_check"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
 
@@ -180,6 +187,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Stealth"
+                android:id="@+id/stealth_check"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
 
@@ -208,6 +216,7 @@
                     android:layout_weight="1"
                     android:text="15"
                     android:textSize="25dp"
+                    android:inputType="number"
                     android:gravity="center"
                     android:layout_gravity="center"
                     android:cursorVisible="true"
@@ -228,6 +237,7 @@
                 android:layout_height="wrap_content"
                 android:text="Saving Throws"
                 android:textColor="@color/colorSecondaryDark"
+                android:id="@+id/const_save_throws_check"
                 app:fontFamily="@font/balladehf" />
 
             <LinearLayout
@@ -244,6 +254,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Intelligence"
+                    android:inputType="number"
                     android:textColor="@color/colorSecondaryDark"
                     android:textSize="25dp"
                     app:fontFamily="@font/balladehf" />
@@ -273,6 +284,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Saving Throws"
+                android:id="@+id/int_save_throws_check"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
 
@@ -280,6 +292,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Arcana"
+                android:id="@+id/arcana_check"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
 
@@ -287,12 +300,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="History"
+                android:id="@+id/history_check"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
 
             <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/invest_check"
                 android:text="Investigation"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
@@ -301,12 +316,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nature"
+                android:id="@+id/nature_check"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
 
             <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/religion_check"
                 android:text="Religion"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
@@ -335,6 +352,7 @@
                     android:layout_height="35dp"
                     android:layout_weight="1"
                     android:text="15"
+                    android:inputType="number"
                     android:textSize="25dp"
                     android:gravity="center"
                     android:layout_gravity="center"
@@ -355,6 +373,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Saving Throws"
+                android:id="@+id/wis_save_throw_check"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
 
@@ -362,6 +381,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Animal Handling"
+                android:id="@+id/animal_check"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
 
@@ -369,6 +389,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Insight"
+                android:id="@+id/insight_check"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
 
@@ -376,6 +397,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Medicine"
+                android:id="@+id/medicine_check"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
 
@@ -383,12 +405,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Perception"
+                android:id="@+id/perception_check"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
 
             <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/survival_check"
                 android:text="Survival"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
@@ -406,6 +430,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:inputType="number"
                     android:text="Charisma"
                     android:textColor="@color/colorSecondaryDark"
                     android:textSize="25dp"
@@ -436,6 +461,7 @@
             <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/cha_save_throw_check"
                 android:text="Saving Throws"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
@@ -444,6 +470,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Deception"
+                android:id="@+id/deception_check"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
 
@@ -451,6 +478,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Intimidation"
+                android:id="@+id/intimidation_check"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
 
@@ -458,12 +486,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Performance"
+                android:id="@+id/perform_check"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
 
             <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/persuasion_check"
                 android:text="Persuasion"
                 android:textColor="@color/colorSecondaryDark"
                 app:fontFamily="@font/balladehf" />
