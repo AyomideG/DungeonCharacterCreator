@@ -17,6 +17,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import yeet.dungeonsomething.dungeoncharactercreator.APIDataManager;
+import yeet.dungeonsomething.dungeoncharactercreator.CharacterManager;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Class;
 import yeet.dungeonsomething.dungeoncharactercreator.R;
 
@@ -60,39 +61,51 @@ public class ClassFragment extends Fragment {
                 if (name.equals("Barbarian")) {
                     classImages.setImageResource(R.drawable.barbarian);
                     classDescription.setText(getDescription().get(0));
+                    CharacterManager.getInstance(null).getCharacter().setMyclass(APIDataManager.getInstance(null).getClasses()[0]);
                 }else if (name.equals("Bard")){
                     classImages.setImageResource(R.drawable.bard);
                     classDescription.setText(getDescription().get(1));
+                    CharacterManager.getInstance(null).getCharacter().setMyclass(APIDataManager.getInstance(null).getClasses()[1]);
                 }else if (name.equals("Cleric")){
                     classImages.setImageResource(R.drawable.cleric);
                     classDescription.setText(getDescription().get(2));
+                    CharacterManager.getInstance(null).getCharacter().setMyclass(APIDataManager.getInstance(null).getClasses()[2]);
                 }else if (name.equals("Druid")){
                     classImages.setImageResource(R.drawable.druid);
                     classDescription.setText(getDescription().get(3));
+                    CharacterManager.getInstance(null).getCharacter().setMyclass(APIDataManager.getInstance(null).getClasses()[3]);
                 }else if (name.equals("Fighter")){
                     classImages.setImageResource(R.drawable.fighter);
                     classDescription.setText(getDescription().get(4));
+                    CharacterManager.getInstance(null).getCharacter().setMyclass(APIDataManager.getInstance(null).getClasses()[4]);
                 }else if (name.equals("Monk")){
                     classImages.setImageResource(R.drawable.monk);
                     classDescription.setText(getDescription().get(5));
+                    CharacterManager.getInstance(null).getCharacter().setMyclass(APIDataManager.getInstance(null).getClasses()[5]);
                 }else if (name.equals("Paladin")){
                     classImages.setImageResource(R.drawable.paladin);
                     classDescription.setText(getDescription().get(6));
+                    CharacterManager.getInstance(null).getCharacter().setMyclass(APIDataManager.getInstance(null).getClasses()[6]);
                 }else if (name.equals("Ranger")){
                     classImages.setImageResource(R.drawable.ranger);
                     classDescription.setText(getDescription().get(7));
+                    CharacterManager.getInstance(null).getCharacter().setMyclass(APIDataManager.getInstance(null).getClasses()[7]);
                 }else if (name.equals("Rogue")){
                     classImages.setImageResource(R.drawable.rogue);
                     classDescription.setText(getDescription().get(8));
+                    CharacterManager.getInstance(null).getCharacter().setMyclass(APIDataManager.getInstance(null).getClasses()[8]);
                 }else if (name.equals("Sorcerer")){
                     classImages.setImageResource(R.drawable.sorcerer);
                     classDescription.setText(getDescription().get(9));
+                    CharacterManager.getInstance(null).getCharacter().setMyclass(APIDataManager.getInstance(null).getClasses()[9]);
                 }else if (name.equals("Warlock")){
                     classImages.setImageResource(R.drawable.warlock);
                     classDescription.setText(getDescription().get(10));
+                    CharacterManager.getInstance(null).getCharacter().setMyclass(APIDataManager.getInstance(null).getClasses()[10]);
                 }else if (name.equals("Wizard")){
                     classImages.setImageResource(R.drawable.wizard);
                     classDescription.setText(getDescription().get(11));
+                    CharacterManager.getInstance(null).getCharacter().setMyclass(APIDataManager.getInstance(null).getClasses()[11]);
                 }
             }
 

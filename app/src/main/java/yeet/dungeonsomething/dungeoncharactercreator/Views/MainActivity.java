@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.EditText;
 
 
+import java.util.ArrayList;
+
 import yeet.dungeonsomething.dungeoncharactercreator.CharacterManager;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Character;
 import yeet.dungeonsomething.dungeoncharactercreator.R;
@@ -15,12 +17,12 @@ import yeet.dungeonsomething.dungeoncharactercreator.Views.Dialogs.MainPageDataN
 
 public class MainActivity extends AppCompatActivity {
 
-    Character[] chars;
+    ArrayList<EditText> editTexts;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        editTexts = new ArrayList<>();
         final Intent intent = new Intent(this, CharacterHomeActivity.class);
        // final Intent intent1 = new Intent(this, WizardTabsActivity.class);
         final AppCompatEditText editText = findViewById(R.id.CharacterName);
@@ -28,8 +30,11 @@ public class MainActivity extends AppCompatActivity {
         final AppCompatEditText editText2 = findViewById(R.id.CharacterName3);
         final AppCompatEditText editText3 = findViewById(R.id.CharacterName4);
         final AppCompatEditText editText4 = findViewById(R.id.CharacterName5);
-
-        chars = new Character[5];
+        editTexts.add(editText);
+        editTexts.add(editText1);
+        editTexts.add(editText2);
+        editTexts.add(editText3);
+        editTexts.add(editText4);
         editText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                     mpdn.show(getFragmentManager(), "Name");
                 }
                 else {
-                    intent.putExtra("CHARACTER_NAME", chars[0].getName());
+                    intent.putExtra("CHARACTER_NAME", CharacterManager.getInstance(null).getCharacterNames()[0]);
                     startActivity(intent);
                 }
             }
@@ -53,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                     MainPageDataName mpdn = new MainPageDataName();
                     mpdn.show(getFragmentManager(), "Name");                }
                 else {
-                    intent.putExtra("CHARACTER_NAME", chars[1].getName());
+                    intent.putExtra("CHARACTER_NAME", CharacterManager.getInstance(null).getCharacterNames()[1]);
                     startActivity(intent);
                 }
             }
@@ -67,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                     MainPageDataName mpdn = new MainPageDataName();
                     mpdn.show(getFragmentManager(), "Name");                }
                 else {
-                    intent.putExtra("CHARACTER_NAME", chars[2].getName());
+                    intent.putExtra("CHARACTER_NAME", CharacterManager.getInstance(null).getCharacterNames()[2]);
                     startActivity(intent);
                 }
             }
@@ -81,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                     MainPageDataName mpdn = new MainPageDataName();
                     mpdn.show(getFragmentManager(), "Name");                }
                 else {
-                    intent.putExtra("CHARACTER_NAME", chars[3].getName());
+                    intent.putExtra("CHARACTER_NAME", CharacterManager.getInstance(null).getCharacterNames()[3]);
                     startActivity(intent);
                 }
             }
@@ -96,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                     mpdn.show(getFragmentManager(), "Name");
                 }
                 else {
-                    intent.putExtra("CHARACTER_NAME", chars[4].getName());
+                    intent.putExtra("CHARACTER_NAME", CharacterManager.getInstance(null).getCharacterNames()[4]);
                     startActivity(intent);
                 }
             }
@@ -115,5 +120,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void addCharacterName(String name){
         CharacterManager.getInstance(getAssets()).newCharacter().setName(name);
+        String [] charNames = CharacterManager.getInstance(null).getCharacterNames();
+        for(int i = 0; i < charNames.length; ++i){
+            if(charNames[i] == null){
+                editTexts.get(i).setText("New Character");
+            } else {
+                editTexts.get(i).setText(charNames[i]);
+            }
+        }
     }
 }
