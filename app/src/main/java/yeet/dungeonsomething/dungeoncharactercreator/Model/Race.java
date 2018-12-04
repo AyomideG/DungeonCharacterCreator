@@ -26,7 +26,6 @@ public class Race implements Serializable {
         return ret;
     }
 
-
     public String getName() {
         return name;
     }

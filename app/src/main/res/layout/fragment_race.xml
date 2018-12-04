@@ -47,6 +47,16 @@
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/raceDescription"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scrollbars="horizontal"
+            android:textColor="@color/colorSecondaryDark"
+            android:textSize="15dp"
+            app:fontFamily="@font/livingst" />
+
     </LinearLayout>
 
 </FrameLayout>

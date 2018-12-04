@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import yeet.dungeonsomething.dungeoncharactercreator.CharacterManager;
+import yeet.dungeonsomething.dungeoncharactercreator.Model.Character;
 import yeet.dungeonsomething.dungeoncharactercreator.R;
 
 /**
@@ -33,11 +35,20 @@ public class BackgroundFragment extends Fragment {
 
         screen = (EditText) v.findViewById(R.id.backgroundText);
 
-        screen.setText("");
+        if(CharacterManager.getInstance(null).getCharacter().getPlayerInfo().getBackGround() == null) {
+            screen.setText("");
+        } else {
+            screen.setText(CharacterManager.getInstance(null).getCharacter().getPlayerInfo().getBackGround());
+        }
 
         return v;
 
     }
 
+    @Override
+    public void onDetach() {
+        CharacterManager.getInstance(null).getCharacter().getPlayerInfo().setBackGround(screen.getText().toString());
+        super.onDetach();
+    }
 }
 
