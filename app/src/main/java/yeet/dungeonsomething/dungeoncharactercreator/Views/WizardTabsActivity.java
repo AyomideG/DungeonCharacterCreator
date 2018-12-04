@@ -39,11 +39,11 @@ public class WizardTabsActivity extends AppCompatActivity {
         //add tabs in the same order defined by page adapter, name tabs
         layout.addTab(layout.newTab().setText(R.string.race));
         layout.addTab(layout.newTab().setText(R.string.charclass));
-        layout.addTab(layout.newTab().setText(R.string.level));
         layout.addTab(layout.newTab().setText(R.string.statistics));
         layout.addTab(layout.newTab().setText(R.string.traits));
         layout.addTab(layout.newTab().setText(R.string.background));
         layout.addTab(layout.newTab().setText(R.string.inventory));
+        layout.addTab(layout.newTab().setText("Finalize"));
         //get viewpager and page adapter -- can copy and paste the rest of this
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
         final PagerAdapter adapter = new PagerAdapter
