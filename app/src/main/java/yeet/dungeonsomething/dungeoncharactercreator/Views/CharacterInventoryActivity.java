@@ -37,12 +37,13 @@ public class CharacterInventoryActivity extends AppCompatActivity {
         BetterSpinner textView = (BetterSpinner)
                 findViewById(R.id.sortSpinner);
         textView.setAdapter(adapter);
-        Bundle b = getIntent().getExtras();
-        if (b != null) {
-            myCharacter = loadMyCharacterData(b);
-        } else if (savedInstanceState != null) {
-            myCharacter = loadMyCharacterData(savedInstanceState);
-        }
+//        Bundle b = getIntent().getExtras();
+//        if (b != null) {
+//            myCharacter = loadMyCharacterData(b);
+//        } else if (savedInstanceState != null) {
+//            myCharacter = loadMyCharacterData(savedInstanceState);
+//        }
+        myCharacter = CharacterManager.getInstance(null).getCharacter();
 
         if (myCharacter == null) {
             Log.e("ERROR", "Character data null on create");

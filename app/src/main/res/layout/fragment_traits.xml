@@ -8,231 +8,225 @@
     android:padding="5dp"
     tools:context=".Views.TraitsFragment">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="5dp">
+        android:orientation="vertical">
 
-        <TextView
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Please select all that applies from the list below and enter vales for flaws, bond, and ideals and click the add button to add more."
-            android:textColor="@color/colorSecondaryDark"
-            android:textSize="15dp"
-            app:fontFamily="@font/livingst" />
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/languagesView"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
-            android:text="Languages"
-            android:textColor="@color/colorSecondaryDark"
-            android:textSize="25dp"
-            app:fontFamily="@font/livingst" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Spinner
-                android:id="@+id/languagesSpinner"
-                android:layout_width="300dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginRight="15dp"
-                android:textColor="@color/colorSecondaryDark"
-                app:fontFamily="@font/balladehf"/>
+                android:orientation="vertical"
+                android:padding="5dp">
 
-            <Button
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:text="+"
-                android:textColor="@color/colorSecondaryDark"
-                app:fontFamily="@font/balladehf"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Please select all that applies from the list below and enter vales for flaws, bond, and ideals and click the add button to add more."
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textSize="15dp"
+                    app:fontFamily="@font/balladehf" />
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/flawsView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:text="Flaws"
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textSize="25dp"
+                    app:fontFamily="@font/balladehf" />
 
-        <TextView
-            android:id="@+id/flawsView"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
-            android:text="Flaws"
-            android:textColor="@color/colorSecondaryDark"
-            android:textSize="25dp"
-            app:fontFamily="@font/livingst" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/flawsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:cursorVisible="true"
+                        android:textColor="@color/colorSecondaryDark"
+                        android:textCursorDrawable="@color/black"
+                        app:fontFamily="@font/balladehf" />
 
-            <EditText
-                android:id="@+id/flawsText"
-                android:layout_width="300dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="15dp"
-                android:textColor="@color/colorSecondaryDark"
-                app:fontFamily="@font/balladehf"
-                android:cursorVisible="true"
-                android:textCursorDrawable="@color/black"/>
+                    <Button
+                        android:id="@+id/addFlaw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/circle_button"
+                        android:onClick="addFlaw"
+                        android:text="+"
+                        android:textColor="@color/colorSecondaryDark"
+                        app:fontFamily="@font/balladehf" />
 
-            <Button
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:text="+"
-                android:textColor="@color/colorSecondaryDark"
-                app:fontFamily="@font/balladehf"/>
+                </LinearLayout>
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/bondsView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:text="Bonds"
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textSize="25dp"
+                    app:fontFamily="@font/balladehf" />
 
-        <TextView
-            android:id="@+id/bondsView"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
-            android:text="Bonds"
-            android:textColor="@color/colorSecondaryDark"
-            android:textSize="25dp"
-            app:fontFamily="@font/livingst" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/bondsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:cursorVisible="true"
+                        android:textColor="@color/colorSecondaryDark"
+                        android:textCursorDrawable="@color/black"
+                        app:fontFamily="@font/balladehf" />
 
-            <EditText
-                android:id="@+id/bondsText"
-                android:layout_width="300dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="15dp"
-                android:textColor="@color/colorSecondaryDark"
-                app:fontFamily="@font/balladehf"
-                android:cursorVisible="true"
-                android:textCursorDrawable="@color/black"/>
+                    <Button
+                        android:id="@+id/addBond"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/circle_button"
+                        android:onClick="addBond"
+                        android:text="+"
+                        android:textColor="@color/colorSecondaryDark"
+                        app:fontFamily="@font/balladehf" />
 
-            <Button
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:text="+"
-                android:textColor="@color/colorSecondaryDark"
-                app:fontFamily="@font/balladehf"/>
+                </LinearLayout>
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/idealsView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:text="Ideals"
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textSize="25dp"
+                    app:fontFamily="@font/balladehf" />
 
-        <TextView
-            android:id="@+id/idealsView"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
-            android:text="Ideals"
-            android:textColor="@color/colorSecondaryDark"
-            android:textSize="25dp"
-            app:fontFamily="@font/livingst" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/idealsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:cursorVisible="true"
+                        android:textColor="@color/colorSecondaryDark"
+                        android:textCursorDrawable="@color/black"
+                        app:fontFamily="@font/balladehf" />
 
-            <EditText
-                android:id="@+id/idealsText"
-                android:layout_width="300dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="15dp"
-                android:textColor="@color/colorSecondaryDark"
-                app:fontFamily="@font/balladehf"
-                android:cursorVisible="true"
-                android:textCursorDrawable="@color/black"/>
+                    <Button
+                        android:id="@+id/addIdeal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/circle_button"
+                        android:onClick="addIdeal"
+                        android:text="+"
+                        android:textColor="@color/colorSecondaryDark"
+                        app:fontFamily="@font/balladehf" />
 
-            <Button
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:text="+"
-                android:textColor="@color/colorSecondaryDark"
-                app:fontFamily="@font/balladehf"/>
+                </LinearLayout>
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/traitsView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:text="Personality Traits"
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textSize="25dp"
+                    app:fontFamily="@font/balladehf" />
 
-        <TextView
-            android:id="@+id/traitsView"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
-            android:text="Personality Traits"
-            android:textColor="@color/colorSecondaryDark"
-            android:textSize="25dp"
-            app:fontFamily="@font/livingst" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                    <Spinner
+                        android:id="@+id/traitsSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorSecondaryDark"
+                        app:fontFamily="@font/balladehf" />
 
-            <Spinner
-                android:id="@+id/traitsSpinner"
-                android:layout_width="300dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="15dp"
-                android:textColor="@color/colorSecondaryDark"
-                app:fontFamily="@font/balladehf"/>
-
-            <Button
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:text="+"
-                android:textColor="@color/colorSecondaryDark"
-                app:fontFamily="@font/balladehf"/>
-
-        </LinearLayout>
+                </LinearLayout>
 
 
-        <TextView
-            android:id="@+id/featureView"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
-            android:text="Feature"
-            android:textColor="@color/colorSecondaryDark"
-            android:textSize="25dp"
-            app:fontFamily="@font/livingst" />
+                <TextView
+                    android:id="@+id/featureView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:text="Feature"
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textSize="25dp"
+                    app:fontFamily="@font/balladehf" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-            <Spinner
-                android:id="@+id/featureSpinner"
-                android:layout_width="300dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="15dp"
-                android:textColor="@color/colorSecondaryDark"
-                app:fontFamily="@font/balladehf"/>
+                    <Spinner
+                        android:id="@+id/featureSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorSecondaryDark"
+                        app:fontFamily="@font/balladehf" />
 
-            <Button
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:text="+"
-                android:textColor="@color/colorSecondaryDark"
-                app:fontFamily="@font/balladehf"/>
+                </LinearLayout>
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/languagesView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:text="Languages"
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textSize="25dp"
+                    app:fontFamily="@font/balladehf" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/languagesSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorSecondaryDark"
+                        app:fontFamily="@font/balladehf" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
     </LinearLayout>
-
-    </ScrollView>
 
 </FrameLayout>

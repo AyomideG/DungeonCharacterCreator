@@ -34,12 +34,13 @@ public class CharacterBGActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character_bg);
 
-        Bundle b = getIntent().getExtras();
-        if(b != null){
-            myCharacter = loadMyCharacterData(b);
-        } else if(savedInstanceState != null){
-            myCharacter = loadMyCharacterData(savedInstanceState);
-        }
+//        Bundle b = getIntent().getExtras();
+//        if(b != null){
+//            myCharacter = loadMyCharacterData(b);
+//        } else if(savedInstanceState != null){
+//            myCharacter = loadMyCharacterData(savedInstanceState);
+//        }
+        myCharacter = CharacterManager.getInstance(null).getCharacter();
 
         if(myCharacter == null){
             Log.e("ERROR","Character data null on create");

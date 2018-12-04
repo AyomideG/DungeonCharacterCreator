@@ -14,6 +14,16 @@ public class PlayerInfo implements Serializable {
     ArrayList<String> flaws;
     ArrayList<Language> languages;
 
+    public PlayerInfo(){
+        traits = new ArrayList<>();
+        features = new ArrayList<>();
+        ideals = new ArrayList<>();
+        bonds = new ArrayList<>();
+        flaws = new ArrayList<>();
+        languages = new ArrayList<>();
+
+    }
+
     public String getBackGround() {
         return backGround;
     }

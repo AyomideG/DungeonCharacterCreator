@@ -30,15 +30,15 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
             case 1:
                 return new ClassFragment();
             case 2:
-                return new LevelFragment();
-            case 3:
                 return new SkillsProficienciesFragment();
-            case 4:
+            case 3:
                 return new TraitsFragment();
-            case 5:
+            case 4:
                 return new BackgroundFragment();
-            case 6:
+            case 5:
                 return new InventoryFragment();
+            case 6:
+                return new FinalizeFragment();
             default:
                 return new RaceFragment();
         }

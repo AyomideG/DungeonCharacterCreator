@@ -62,6 +62,12 @@ public class NoteActivity extends AppCompatActivity {
             }
         });
 
+
+        ((TextView) findViewById(R.id.character_home_name)).setText(CharacterManager.getInstance(getAssets()).getCharacter().getName());
+        ((TextView) findViewById(R.id.character_home_race)).setText(CharacterManager.getInstance(getAssets()).getCharacter().getRace().getName());
+        ((TextView) findViewById(R.id.character_home_class)).setText(CharacterManager.getInstance(getAssets()).getCharacter().getMyclass().getName());
+        ((TextView) findViewById(R.id.character_home_level)).setText(String.valueOf(CharacterManager.getInstance(getAssets()).getCharacter().getLevel()));
+
     }
 
     private ArrayList<Note> getNotes() {
