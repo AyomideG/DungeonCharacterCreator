@@ -1,11 +1,16 @@
 package yeet.dungeonsomething.dungeoncharactercreator.Views;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import yeet.dungeonsomething.dungeoncharactercreator.CharacterManager;
 import yeet.dungeonsomething.dungeoncharactercreator.R;
 
 public class WizardTabsActivity extends AppCompatActivity {
@@ -66,5 +71,33 @@ public class WizardTabsActivity extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
             }
         });
+    }
+
+    public void addFlaw(View view){
+        CharacterManager.getInstance(getAssets()).getCharacter().getPlayerInfo().getFlaws().add(
+                String.valueOf(((TextView)findViewById(R.id.flawsText)).getText())
+        );
+        ((TextView)findViewById(R.id.flawsText)).setText("");
+        Toast.makeText(this, "Trait added", Toast.LENGTH_LONG).show();
+    }
+    public void addBond(View v){
+        CharacterManager.getInstance(null).getCharacter().getPlayerInfo().getBonds().add(
+                String.valueOf(((TextView)findViewById(R.id.bondsText)).getText())
+        );
+        ((TextView)findViewById(R.id.bondsText)).setText("");
+        Toast.makeText(this, "Trait added", Toast.LENGTH_LONG).show();
+    }
+    public void addIdeal(View v){
+        CharacterManager.getInstance(null).getCharacter().getPlayerInfo().getIdeals().add(
+                String.valueOf(((TextView)findViewById(R.id.idealsText)).getText())
+        );
+        ((TextView)findViewById(R.id.idealsText)).setText("");
+        Toast.makeText(this, "Trait added", Toast.LENGTH_LONG).show();
+    }
+
+    public void leaveWizard(View view) {
+        Intent intent = new Intent(this, CharacterHomeActivity.class);
+        //intent.putExtra("CHARACTER_NAME", myCharacter.getName());
+        startActivity(intent);
     }
 }

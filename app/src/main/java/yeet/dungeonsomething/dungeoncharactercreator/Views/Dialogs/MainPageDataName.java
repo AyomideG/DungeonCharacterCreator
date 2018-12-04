@@ -31,7 +31,9 @@ public class MainPageDataName extends DialogFragment {
                 .setPositiveButton("Begin Creation", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // apply and render?
+
                         name = view.findViewById(R.id.character_name);
+
                         ((MainActivity)getActivity()).addCharacterName(name.getText().toString());
                         dismiss();
                     }

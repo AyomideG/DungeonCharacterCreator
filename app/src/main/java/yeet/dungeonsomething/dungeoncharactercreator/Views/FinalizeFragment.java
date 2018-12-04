@@ -46,10 +46,6 @@ public class FinalizeFragment extends Fragment {
         return v;
     }
 
-    public void leaveWizard(View view) {
-        Intent intent = new Intent(getActivity(), CharacterHomeActivity.class);
-        intent.putExtra("CHARACTER_NAME", myCharacter.getName());
-        getActivity().startActivity(intent);
-    }
+
 
 }

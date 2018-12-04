@@ -62,7 +62,7 @@ public class SpellcastingAttacksFragment extends Fragment {
         //Spell list stuff
 //        ExpandableListView expandableListView = (ExpandableListView) getView().findViewById(R.id.expandableKnownSpellsListView);
         HashMap<String, List<String>> allSpells = getAllSpells();
-        Log.d("NUMSPELLS", "#keys =" + allSpells.keySet().size());
+//        Log.d("NUMSPELLS", "#keys =" + allSpells.keySet().size());
 //        expandableListView.setAdapter(new AttacksActivity.CustomExpandableListAdapter(getContext(), new ArrayList<String>(allSpells.keySet()), allSpells));
         expandableListView = (ExpandableListView) view.findViewById(R.id.expandableKnownSpellsListView);
         expandableListAdapter = new AttacksActivity.CustomExpandableListAdapter(getContext(), expandableListTitle, expandableListDetail);

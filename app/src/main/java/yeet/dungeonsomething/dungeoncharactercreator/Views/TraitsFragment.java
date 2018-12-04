@@ -8,16 +8,20 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
 import yeet.dungeonsomething.dungeoncharactercreator.APIDataManager;
+import yeet.dungeonsomething.dungeoncharactercreator.CharacterManager;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Feature;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Language;
 import yeet.dungeonsomething.dungeoncharactercreator.Model.Trait;
@@ -33,6 +37,9 @@ public class TraitsFragment extends Fragment {
     ArrayList<String> featureList = new ArrayList<>();
 
     MyAdapter adapter, adapter2, adapter3;
+    ArrayList<String> selectedLanguages;
+    ArrayList<String> selectedTraits;
+    ArrayList<String> selectedFeatures;
 
     public TraitsFragment() {
         // Required empty public constructor
@@ -95,14 +102,47 @@ public class TraitsFragment extends Fragment {
 
 
         adapter = new MyAdapter(this.getActivity(), 0, languagesListVOs);
+        adapter.dataStore = selectedLanguages = new ArrayList<>();
         adapter2 = new MyAdapter(this.getActivity(), 0, traitsListVOs);
+        adapter2.dataStore = selectedTraits = new ArrayList<>();
         adapter3 = new MyAdapter(this.getActivity(), 0, featureListVOs);
+        adapter3.dataStore = selectedFeatures = new ArrayList<>();
         languagesSpinner.setAdapter(adapter);
         traitsSpinner.setAdapter(adapter2);
         featureSpinner.setAdapter(adapter3);
+        languagesSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Log.e("SELECT", parent.getItemAtPosition(position).toString());
+//                if(((CheckBox)view.findViewById(R.id.checkBox)).isChecked())
+//                    Log.e("CLICKED", String.valueOf(((TextView)view.findViewById(R.id.text)).getText())) ;
+//                else
+//                    Log.e("CLICKED", "not checked");
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
         return v;
 
+
+    }
+
+    @Override
+    public void onDetach(){
+        super.onDetach();
+        Language[] languages = APIDataManager.getInstance(getActivity().getAssets()).getLanguages();
+        Log.e("LANGUAGE",selectedLanguages.size()+" languages");
+        for (int i = 0; i < selectedLanguages.size(); i++) {
+            for (int j = 0; j < languages.length; j++) {
+                if(languages[j].getName().compareToIgnoreCase(selectedLanguages.get(i)) == 0){
+                    CharacterManager.getInstance(null).getCharacter().getPlayerInfo().getLanguages().add(languages[j]);
+                }
+            }
+
+        }
     }
 
     private ArrayList<String> getLanguages(){
@@ -167,10 +207,12 @@ class StateVO {
 
     public void setSelected(boolean selected) {
         this.selected = selected;
+        Log.i("WOOT", "SUCCESSFUL");
     }
 }
 
 class MyAdapter extends ArrayAdapter<StateVO> {
+    public ArrayList<String> dataStore;
     private Context mContext;
     private ArrayList<StateVO> listState;
     private MyAdapter myAdapter;
@@ -232,6 +274,10 @@ class MyAdapter extends ArrayAdapter<StateVO> {
 
                 if (!isFromView) {
                     listState.get(position).setSelected(isChecked);
+                    if(isChecked)
+                        dataStore.add(listState.get(position).getTitle());
+                    else
+                        dataStore.remove(listState.get(position).getTitle());
                 }
             }
         });

@@ -28,12 +28,13 @@ public class CharacterHomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character_home);
 
-        Bundle b = getIntent().getExtras();
-        if(b != null){
-            myCharacter = loadMyCharacterData(b);
-        } else if(savedInstanceState != null){
-            myCharacter = loadMyCharacterData(savedInstanceState);
-        }
+//        Bundle b = getIntent().getExtras();
+//        if(b != null){
+//            myCharacter = loadMyCharacterData(b);
+//        } else if(savedInstanceState != null){
+//            myCharacter = loadMyCharacterData(savedInstanceState);
+//        }
+        myCharacter = CharacterManager.getInstance(getAssets()).getCharacter();
 
         if(myCharacter == null){
             Log.e("ERROR","Character data null on create");
